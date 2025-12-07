@@ -24,7 +24,7 @@ encrypted_vfs/
 ## Module Status
 
 ### ✅ Module 1: Basic FUSE Framework (COMPLETED)
-**Implemented by:** [Your Name]  
+**Implemented by:** Waqas  
 **Files:** `evfs_core.c`, `evfs_metadata.c`
 
 **Features:**
