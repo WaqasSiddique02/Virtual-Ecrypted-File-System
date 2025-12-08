@@ -44,6 +44,9 @@ int evfs_getattr(const char *path, struct stat *stbuf) {
 // Read directory contents
 int evfs_readdir(const char *path, void *buf, fuse_fill_dir_t filler,
                  off_t offset, struct fuse_file_info *fi) {
+    (void)offset;  // Mark as intentionally unused
+    (void)fi;      // Mark as intentionally unused
+    
     printf("[READDIR] Called for path: %s\n", path);
     
     int dir_idx = find_file_by_path(path);
@@ -75,6 +78,8 @@ int evfs_readdir(const char *path, void *buf, fuse_fill_dir_t filler,
 
 // Create a new file
 int evfs_create(const char *path, mode_t mode, struct fuse_file_info *fi) {
+    (void)fi;  // Mark as intentionally unused
+    
     printf("[CREATE] Called for path: %s\n", path);
     
     // Check if file already exists
@@ -112,6 +117,8 @@ int evfs_create(const char *path, mode_t mode, struct fuse_file_info *fi) {
 
 // Open a file
 int evfs_open(const char *path, struct fuse_file_info *fi) {
+    (void)fi;  // Mark as intentionally unused
+    
     printf("[OPEN] Called for path: %s\n", path);
     
     int idx = find_file_by_path(path);
@@ -131,6 +138,8 @@ int evfs_open(const char *path, struct fuse_file_info *fi) {
 
 // Initialize filesystem
 void *evfs_init(struct fuse_conn_info *conn) {
+    (void)conn;  // Mark as intentionally unused
+    
     printf("[INIT] Initializing EVFS...\n");
     init_filesystem();
     return NULL;
@@ -138,9 +147,17 @@ void *evfs_init(struct fuse_conn_info *conn) {
 
 // Destroy filesystem
 void evfs_destroy(void *private_data) {
+    (void)private_data;  // Mark as intentionally unused
+    
     printf("[DESTROY] Cleaning up EVFS...\n");
+    
     // Print final file table state
     print_file_table();
+    
+    // Cleanup storage
+    cleanup_storage();
+    
+    printf("[DESTROY] EVFS cleanup complete\n");
 }
 
 // Set file timestamps
@@ -181,5 +198,12 @@ struct fuse_operations evfs_oper = {
     .readdir    = evfs_readdir,
     .create     = evfs_create,
     .open       = evfs_open,
+    .read       = evfs_read,
+    .write      = evfs_write,
+    .truncate   = evfs_truncate,
+    .unlink     = evfs_unlink,
+    .mkdir      = evfs_mkdir,
+    .rmdir      = evfs_rmdir,
+    .rename     = evfs_rename,
     .utimens    = evfs_utimens,
 };

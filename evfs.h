@@ -77,6 +77,59 @@ void print_file_table(void);
 
 /*
  * ============================================================================
+ * STORAGE MODULE FUNCTIONS (implemented in evfs_storage.c)
+ * ============================================================================
+ */
+
+// Initialize storage system
+int init_storage(void);
+
+// Allocate storage for a file
+int allocate_storage(int file_idx, size_t size);
+
+// Read data from storage
+int read_block(int file_idx, off_t offset, char *buf, size_t size);
+
+// Write data to storage
+int write_block(int file_idx, off_t offset, const char *buf, size_t size);
+
+// Delete file storage
+int delete_storage(int file_idx);
+
+// Cleanup storage system
+void cleanup_storage(void);
+
+/*
+ * ============================================================================
+ * READ/WRITE OPERATIONS (implemented in evfs_readwrite.c)
+ * ============================================================================
+ */
+
+// Read from file
+int evfs_read(const char *path, char *buf, size_t size, off_t offset,
+              struct fuse_file_info *fi);
+
+// Write to file
+int evfs_write(const char *path, const char *buf, size_t size, off_t offset,
+               struct fuse_file_info *fi);
+
+// Truncate file
+int evfs_truncate(const char *path, off_t size);
+
+// Delete file
+int evfs_unlink(const char *path);
+
+// Create directory
+int evfs_mkdir(const char *path, mode_t mode);
+
+// Remove directory
+int evfs_rmdir(const char *path);
+
+// Rename file/directory
+int evfs_rename(const char *from, const char *to);
+
+/*
+ * ============================================================================
  * FUSE OPERATIONS (implemented in evfs_core.c)
  * ============================================================================
  */
@@ -110,26 +163,5 @@ int evfs_utimens(const char *path, const struct timespec ts[2]);
  */
 
 extern struct fuse_operations evfs_oper;
-
-/*
- * ============================================================================
- * ENCRYPTION MODULE (to be implemented by team member)
- * ============================================================================
- */
-
-// These functions will be implemented in evfs_encryption.c
-// void encrypt_data(const char *plaintext, char *ciphertext, size_t size);
-// void decrypt_data(const char *ciphertext, char *plaintext, size_t size);
-
-/*
- * ============================================================================
- * STORAGE MODULE (to be implemented by team member)
- * ============================================================================
- */
-
-// These functions will be implemented in evfs_storage.c
-// int read_block(int file_idx, off_t offset, char *buf, size_t size);
-// int write_block(int file_idx, off_t offset, const char *buf, size_t size);
-// int init_storage(const char *backing_file);
 
 #endif // EVFS_H

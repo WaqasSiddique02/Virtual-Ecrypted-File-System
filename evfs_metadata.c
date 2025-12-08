@@ -3,10 +3,14 @@
 // Global file table
 file_metadata_t file_table[MAX_FILES];
 int initialized = 0;
-
 // Initialize the file system
 void init_filesystem(void) {
-    if (initialized) return;
+    if (initialized) {
+        printf("[METADATA] Filesystem already initialized\n");
+        return;
+    }
+    
+    printf("[METADATA] Initializing filesystem metadata...\n");
     
     memset(file_table, 0, sizeof(file_table));
     
@@ -19,12 +23,19 @@ void init_filesystem(void) {
     file_table[0].atime = time(NULL);
     file_table[0].mtime = time(NULL);
     file_table[0].ctime = time(NULL);
-    file_table[0].size = 0;
+    file_table[0].size = BLOCK_SIZE;
     file_table[0].is_used = 1;
     file_table[0].parent_idx = -1;
     
+    // Initialize storage system
+    if (init_storage() < 0) {
+        fprintf(stderr, "[METADATA] Failed to initialize storage\n");
+        return;
+    }
+    
     initialized = 1;
     printf("[INIT] File system initialized with root directory\n");
+    print_file_table();
 }
 
 // Find file by path
