@@ -39,7 +39,7 @@ encrypted_vfs/
 - ✅ Timestamp updates (utimens)
 
 ### 🔄 Module 2: Read/Write with Encryption
-**To be implemented by:** [Team Member Name]  
+**To be implemented by:** [Sardar Muhammad Ali Khan]  
 **Files to create:** `evfs_readwrite.c`, `evfs_encryption.c`
 
 **Required Functions:**
@@ -54,6 +54,71 @@ int evfs_write(const char *path, const char *buf, size_t size, off_t offset,
 void encrypt_data(const char *plaintext, char *ciphertext, size_t size);
 void decrypt_data(const char *ciphertext, char *plaintext, size_t size);
 ```
+implemented Module 2 (Read/Write Operations) and Module 3 (Storage Management) for your Encrypted Virtual File System project.
+Files Created
+
+evfs_storage.c - Manages persistent data storage
+
+Creates a backing file (evfs_data.bin) to store actual file data
+Allocates storage space for files dynamically
+Handles read/write operations to the backing file
+Manages storage expansion when files grow
+Cleans up resources on unmount
+
+
+evfs_readwrite.c - Implements file operations
+
+evfs_read() - Read data from files
+evfs_write() - Write data to files
+evfs_truncate() - Resize files
+evfs_unlink() - Delete files
+evfs_mkdir() - Create directories
+evfs_rmdir() - Remove directories
+evfs_rename() - Rename files/directories
+
+
+Makefile - Build configuration for compiling all modules
+test_readwrite.sh - Comprehensive test suite
+
+Files Updated
+
+evfs.h - Added function declarations for new modules
+evfs_core.c - Added new operations to FUSE operations structure
+evfs_metadata.c - Added storage initialization call
+
+Features Now Available
+✅ File Operations:
+
+Create files (touch, echo >)
+Read files (cat, less)
+Write files (text editors, echo, >)
+Append to files (>>)
+Delete files (rm)
+Rename files (mv)
+Truncate files
+
+✅ Directory Operations:
+
+Create directories (mkdir)
+Remove empty directories (rmdir)
+List directory contents (ls)
+
+✅ Storage Management:
+
+Persistent storage in evfs_data.bin
+Dynamic storage allocation
+Automatic expansion when files grow
+Data survives unmount/remount
+
+✅ Metadata Management:
+
+File sizes tracked correctly
+Timestamps updated (access, modification, change times)
+File attributes maintained
+
+
+
+
 
 ### 🔄 Module 3: Persistent Storage
 **To be implemented by:** [Team Member Name]  
