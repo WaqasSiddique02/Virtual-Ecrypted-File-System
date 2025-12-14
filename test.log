@@ -1,0 +1,165 @@
+==============================================
+  Encrypted Virtual File System (EVFS)
+  CS-352 Operating Systems Course Project
+==============================================
+  Module 1: Basic FUSE Framework
+  - Mounting and unmounting
+  - File system operations
+  - Metadata management
+==============================================
+
+Mount point: -f
+Starting FUSE filesystem...
+
+[INIT] Initializing EVFS...
+[CRYPTO] Initializing AES-256 encryption...
+[CRYPTO] AES-256 initialized successfully
+[METADATA] Initializing filesystem metadata...
+[STORAGE] Initializing storage system...
+[STORAGE] Creating new backing file
+[STORAGE] Storage system initialized successfully
+[INIT] File system initialized with root directory
+
+========== FILE TABLE ==========
+IDX | USED | TYPE | NAME
+--------------------------------
+  0 |    1 |  DIR | /
+================================
+
+[GETATTR] Called for path: /
+[GETATTR] Success for: / (type: DIR, size: 4096)
+[GETATTR] Called for path: /file3.txt
+[GETATTR] Path not found: /file3.txt
+[GETATTR] Called for path: /hostname.txt
+[GETATTR] Path not found: /hostname.txt
+[GETATTR] Called for path: /large.dat
+[GETATTR] Path not found: /large.dat
+[GETATTR] Called for path: /renamed.txt
+[GETATTR] Path not found: /renamed.txt
+[GETATTR] Called for path: /test.txt
+[GETATTR] Path not found: /test.txt
+[GETATTR] Called for path: /file3.txt
+[GETATTR] Path not found: /file3.txt
+[GETATTR] Called for path: /hostname.txt
+[GETATTR] Path not found: /hostname.txt
+[GETATTR] Called for path: /large.dat
+[GETATTR] Path not found: /large.dat
+[GETATTR] Called for path: /renamed.txt
+[GETATTR] Path not found: /renamed.txt
+[GETATTR] Called for path: /test.txt
+[GETATTR] Path not found: /test.txt
+[READDIR] Called for path: /
+[READDIR] Success for: /
+[GETATTR] Called for path: /file1.txt
+[GETATTR] Path not found: /file1.txt
+[CREATE] Called for path: /file1.txt
+[CREATE] File created successfully: /file1.txt (index: 1)
+[GETATTR] Called for path: /file1.txt
+[GETATTR] Success for: /file1.txt (type: FILE, size: 0)
+[WRITE] Called for path: /file1.txt (size: 4, offset: 0)
+[STORAGE] Allocating 4096 bytes for file 1 at offset 0
+[STORAGE] Writing 4 bytes (padded: 16) to file 1 at offset 0 (physical: 0)
+[CRYPTO] Encrypted 4 bytes (padded to 16)
+[STORAGE] Successfully wrote 16 bytes encrypted (original: 4)
+[WRITE] Updated file size to 4
+[WRITE] Successfully wrote 4 bytes to /file1.txt
+[GETATTR] Called for path: /file1.txt
+[GETATTR] Success for: /file1.txt (type: FILE, size: 4)
+[OPEN] Called for path: /file1.txt
+[OPEN] Success for: /file1.txt
+[READ] Called for path: /file1.txt (size: 4096, offset: 0)
+[READ] Adjusted size to 4 to fit file bounds
+[STORAGE] Reading 4 bytes (padded: 16) from file 1 at offset 0 (physical: 0)
+[CRYPTO] Decrypted 16 bytes
+[STORAGE] Successfully read 4 bytes (decrypted from 16 padded)
+[READ] Successfully read 4 bytes from /file1.txt
+[GETATTR] Called for path: /file2.txt
+[GETATTR] Path not found: /file2.txt
+[CREATE] Called for path: /file2.txt
+[CREATE] File created successfully: /file2.txt (index: 2)
+[GETATTR] Called for path: /file2.txt
+[GETATTR] Success for: /file2.txt (type: FILE, size: 0)
+[WRITE] Called for path: /file2.txt (size: 5, offset: 0)
+[STORAGE] Allocating 4096 bytes for file 2 at offset 4096
+[STORAGE] Writing 5 bytes (padded: 16) to file 2 at offset 0 (physical: 4096)
+[CRYPTO] Encrypted 5 bytes (padded to 16)
+[STORAGE] Successfully wrote 16 bytes encrypted (original: 5)
+[WRITE] Updated file size to 5
+[WRITE] Successfully wrote 5 bytes to /file2.txt
+[GETATTR] Called for path: /file2.txt
+[GETATTR] Success for: /file2.txt (type: FILE, size: 5)
+[OPEN] Called for path: /file2.txt
+[OPEN] Success for: /file2.txt
+[READ] Called for path: /file2.txt (size: 4096, offset: 0)
+[READ] Adjusted size to 5 to fit file bounds
+[STORAGE] Reading 5 bytes (padded: 16) from file 2 at offset 0 (physical: 4096)
+[CRYPTO] Decrypted 16 bytes
+[STORAGE] Successfully read 5 bytes (decrypted from 16 padded)
+[READ] Successfully read 5 bytes from /file2.txt
+[GETATTR] Called for path: /file3.txt
+[GETATTR] Path not found: /file3.txt
+[CREATE] Called for path: /file3.txt
+[CREATE] File created successfully: /file3.txt (index: 3)
+[GETATTR] Called for path: /file3.txt
+[GETATTR] Success for: /file3.txt (type: FILE, size: 0)
+[WRITE] Called for path: /file3.txt (size: 16, offset: 0)
+[STORAGE] Allocating 4096 bytes for file 3 at offset 8192
+[STORAGE] Writing 16 bytes (padded: 16) to file 3 at offset 0 (physical: 8192)
+[CRYPTO] Encrypted 16 bytes (padded to 16)
+[STORAGE] Successfully wrote 16 bytes encrypted (original: 16)
+[WRITE] Updated file size to 16
+[WRITE] Successfully wrote 16 bytes to /file3.txt
+[GETATTR] Called for path: /file3.txt
+[GETATTR] Success for: /file3.txt (type: FILE, size: 16)
+[OPEN] Called for path: /file3.txt
+[OPEN] Success for: /file3.txt
+[READ] Called for path: /file3.txt (size: 4096, offset: 0)
+[READ] Adjusted size to 16 to fit file bounds
+[STORAGE] Reading 16 bytes (padded: 16) from file 3 at offset 0 (physical: 8192)
+[CRYPTO] Decrypted 16 bytes
+[STORAGE] Successfully read 16 bytes (decrypted from 16 padded)
+[READ] Successfully read 16 bytes from /file3.txt
+[GETATTR] Called for path: /file4.txt
+[GETATTR] Path not found: /file4.txt
+[CREATE] Called for path: /file4.txt
+[CREATE] File created successfully: /file4.txt (index: 4)
+[GETATTR] Called for path: /file4.txt
+[GETATTR] Success for: /file4.txt (type: FILE, size: 0)
+[WRITE] Called for path: /file4.txt (size: 32, offset: 0)
+[STORAGE] Allocating 4096 bytes for file 4 at offset 12288
+[STORAGE] Writing 32 bytes (padded: 32) to file 4 at offset 0 (physical: 12288)
+[CRYPTO] Encrypted 32 bytes (padded to 32)
+[STORAGE] Successfully wrote 32 bytes encrypted (original: 32)
+[WRITE] Updated file size to 32
+[WRITE] Successfully wrote 32 bytes to /file4.txt
+[GETATTR] Called for path: /file4.txt
+[GETATTR] Success for: /file4.txt (type: FILE, size: 32)
+[OPEN] Called for path: /file4.txt
+[OPEN] Success for: /file4.txt
+[READ] Called for path: /file4.txt (size: 4096, offset: 0)
+[READ] Adjusted size to 32 to fit file bounds
+[STORAGE] Reading 32 bytes (padded: 32) from file 4 at offset 0 (physical: 12288)
+[CRYPTO] Decrypted 32 bytes
+[STORAGE] Successfully read 32 bytes (decrypted from 32 padded)
+[READ] Successfully read 32 bytes from /file4.txt
+[DESTROY] Cleaning up EVFS...
+
+========== FILE TABLE ==========
+IDX | USED | TYPE | NAME
+--------------------------------
+  0 |    1 |  DIR | /
+  1 |    1 | FILE | file1.txt
+  2 |    1 | FILE | file2.txt
+  3 |    1 | FILE | file3.txt
+  4 |    1 | FILE | file4.txt
+================================
+
+[STORAGE] Cleaning up storage system...
+[STORAGE] Storage system cleaned up
+[CRYPTO] Cleaning up crypto module...
+[CRYPTO] Crypto cleanup complete
+[DESTROY] EVFS cleanup complete
+
+==============================================
+  EVFS Unmounted
+==============================================

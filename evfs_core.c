@@ -1,4 +1,6 @@
 #include "evfs.h"
+#include "evfs_crypto.h"
+
 
 /*
  * ============================================================================
@@ -138,16 +140,22 @@ int evfs_open(const char *path, struct fuse_file_info *fi) {
 
 // Initialize filesystem
 void *evfs_init(struct fuse_conn_info *conn) {
-    (void)conn;  // Mark as intentionally unused
+    (void)conn;
     
     printf("[INIT] Initializing EVFS...\n");
+    
+    // Initialize crypto module FIRST
+    if (evfs_crypto_init() != 0) {
+        fprintf(stderr, "[INIT] Failed to initialize crypto module\n");
+        return NULL;
+    }
+    
     init_filesystem();
     return NULL;
 }
-
 // Destroy filesystem
 void evfs_destroy(void *private_data) {
-    (void)private_data;  // Mark as intentionally unused
+    (void)private_data;
     
     printf("[DESTROY] Cleaning up EVFS...\n");
     
@@ -157,9 +165,11 @@ void evfs_destroy(void *private_data) {
     // Cleanup storage
     cleanup_storage();
     
+    // Cleanup crypto module LAST
+    evfs_crypto_cleanup();
+    
     printf("[DESTROY] EVFS cleanup complete\n");
 }
-
 // Set file timestamps
 int evfs_utimens(const char *path, const struct timespec ts[2]) {
     printf("[UTIMENS] Called for path: %s\n", path);

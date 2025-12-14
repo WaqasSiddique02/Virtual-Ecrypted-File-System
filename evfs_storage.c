@@ -1,4 +1,5 @@
 #include "evfs.h"
+#include "evfs_crypto.h"
 
 /*
  * ============================================================================
@@ -90,39 +91,75 @@ int allocate_storage(int file_idx, size_t size) {
 /*
  * Read data from storage
  */
+/*
+ * Read data from storage
+ */
+/*
+ * Read data from storage
+ */
 int read_block(int file_idx, off_t offset, char *buf, size_t size) {
     if (file_idx < 0 || file_idx >= MAX_FILES) {
         printf("[STORAGE] Invalid file index: %d\n", file_idx);
         return -1;
     }
-    
+
     if (storage_table[file_idx].storage_offset < 0) {
         printf("[STORAGE] No storage allocated for file %d\n", file_idx);
         // Return zeros for unallocated storage
         memset(buf, 0, size);
         return size;
     }
-    
+
     off_t read_offset = storage_table[file_idx].storage_offset + offset;
-    
-    printf("[STORAGE] Reading %zu bytes from file %d at offset %ld (physical: %ld)\n",
-           size, file_idx, offset, read_offset);
-    
+
+    // Calculate padded size (must match what was written)
+    size_t padded_size = size;
+    if (size % 16 != 0) {
+        padded_size = ((size / 16) + 1) * 16;
+    }
+
+    printf("[STORAGE] Reading %zu bytes (padded: %zu) from file %d at offset %ld (physical: %ld)\n",
+           size, padded_size, file_idx, offset, read_offset);
+
+    // Allocate temporary buffer for padded read
+    char *temp_buf = malloc(padded_size);
+    if (!temp_buf) {
+        perror("[STORAGE] Failed to allocate read buffer");
+        return -1;
+    }
+
     // Seek to position
     if (lseek(backing_fd, read_offset, SEEK_SET) < 0) {
         perror("[STORAGE] Failed to seek");
+        free(temp_buf);
         return -1;
     }
-    
-    // Read data
-    ssize_t bytes_read = read(backing_fd, buf, size);
+
+    // Read the padded size (what was actually written to disk)
+    ssize_t bytes_read = read(backing_fd, temp_buf, padded_size);
     if (bytes_read < 0) {
         perror("[STORAGE] Failed to read");
+        free(temp_buf);
         return -1;
     }
-    
-    printf("[STORAGE] Successfully read %zd bytes\n", bytes_read);
-    return bytes_read;
+
+    // Only decrypt if we actually read some data
+    if (bytes_read > 0) {
+        // Decrypt data (works on padded data)
+        if (evfs_decrypt_buffer(temp_buf, padded_size) != 0) {
+            fprintf(stderr, "[STORAGE] Decryption failed\n");
+            free(temp_buf);
+            return -1;
+        }
+
+        // Copy only the requested size to output buffer
+        memcpy(buf, temp_buf, size);
+        printf("[STORAGE] Successfully read %zu bytes (decrypted from %zu padded)\n", 
+               size, padded_size);
+    }
+
+    free(temp_buf);
+    return size;  // Return the original requested size
 }
 
 /*
@@ -133,26 +170,32 @@ int write_block(int file_idx, off_t offset, const char *buf, size_t size) {
         printf("[STORAGE] Invalid file index: %d\n", file_idx);
         return -1;
     }
-    
-    // Check if we need to allocate or expand storage
+
+    // Calculate padded size for encryption (must be multiple of 16 for AES)
+    size_t padded_size = size;
+    if (size % 16 != 0) {
+        padded_size = ((size / 16) + 1) * 16;
+    }
+
+    // Check if we need to allocate or expand storage (use padded size)
     if (storage_table[file_idx].storage_offset < 0) {
-        // First write - allocate storage
-        if (allocate_storage(file_idx, offset + size) < 0) {
+        // First write - allocate storage for padded size
+        if (allocate_storage(file_idx, offset + padded_size) < 0) {
             return -1;
         }
-    } else if (offset + size > (off_t)storage_table[file_idx].allocated_size) {
+    } else if (offset + padded_size > (off_t)storage_table[file_idx].allocated_size) {
         // Need more space - reallocate
         printf("[STORAGE] Need to expand storage for file %d\n", file_idx);
-        
-        size_t new_size = offset + size;
+
+        size_t new_size = offset + padded_size;
         off_t old_offset = storage_table[file_idx].storage_offset;
         size_t old_size = storage_table[file_idx].allocated_size;
-        
+
         // Allocate new space
         if (allocate_storage(file_idx, new_size) < 0) {
             return -1;
         }
-        
+
         // Copy existing data to new location
         if (old_size > 0) {
             char *temp_buf = malloc(old_size);
@@ -167,30 +210,62 @@ int write_block(int file_idx, off_t offset, const char *buf, size_t size) {
             }
         }
     }
-    
+
     off_t write_offset = storage_table[file_idx].storage_offset + offset;
-    
-    printf("[STORAGE] Writing %zu bytes to file %d at offset %ld (physical: %ld)\n",
-           size, file_idx, offset, write_offset);
-    
+
+    printf("[STORAGE] Writing %zu bytes (padded: %zu) to file %d at offset %ld (physical: %ld)\n",
+           size, padded_size, file_idx, offset, write_offset);
+
+    // Allocate buffer with extra space for AES padding
+    char *enc_buf = malloc(padded_size);
+    if (!enc_buf) {
+        perror("[STORAGE] Failed to allocate encrypt buffer");
+        return -1;
+    }
+
+    // Copy data and zero-pad the extra bytes
+    memcpy(enc_buf, buf, size);
+    if (padded_size > size) {
+        memset(enc_buf + size, 0, padded_size - size);
+    }
+
+    // Encrypt the buffer (encryption happens in-place on full padded buffer)
+    if (evfs_encrypt_buffer(enc_buf, size) != 0) {
+        fprintf(stderr, "[STORAGE] Encryption failed\n");
+        free(enc_buf);
+        return -1;
+    }
+
     // Seek to position
     if (lseek(backing_fd, write_offset, SEEK_SET) < 0) {
         perror("[STORAGE] Failed to seek");
+        free(enc_buf);
         return -1;
     }
-    
-    // Write data
-    ssize_t bytes_written = write(backing_fd, buf, size);
+
+    // Write the FULL PADDED SIZE to disk (critical for decryption to work)
+    ssize_t bytes_written = write(backing_fd, enc_buf, padded_size);
+    free(enc_buf);
+
     if (bytes_written < 0) {
         perror("[STORAGE] Failed to write");
         return -1;
     }
-    
+
+    if ((size_t)bytes_written != padded_size) {
+        fprintf(stderr, "[STORAGE] Partial write: expected %zu, wrote %zd\n", 
+                padded_size, bytes_written);
+        return -1;
+    }
+
     // Sync to disk
     fsync(backing_fd);
+
+    printf("[STORAGE] Successfully wrote %zd bytes encrypted (original: %zu)\n", 
+           bytes_written, size);
     
-    printf("[STORAGE] Successfully wrote %zd bytes\n", bytes_written);
-    return bytes_written;
+    // Return the original size (not padded) to match caller's expectation
+    return size;
 }
 
 /*

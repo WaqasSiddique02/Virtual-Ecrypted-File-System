@@ -1,0 +1,162 @@
+==============================================
+  Encrypted Virtual File System (EVFS)
+  CS-352 Operating Systems Course Project
+==============================================
+  Module 1: Basic FUSE Framework
+  - Mounting and unmounting
+  - File system operations
+  - Metadata management
+==============================================
+
+Mount point: mnt
+Starting FUSE filesystem...
+
+[INIT] Initializing EVFS...
+[METADATA] Initializing filesystem metadata...
+[STORAGE] Initializing storage system...
+[STORAGE] Creating new backing file
+[STORAGE] Storage system initialized successfully
+[INIT] File system initialized with root directory
+
+========== FILE TABLE ==========
+IDX | USED | TYPE | NAME
+--------------------------------
+  0 |    1 |  DIR | /
+================================
+
+[GETATTR] Called for path: /
+[GETATTR] Success for: / (type: DIR, size: 4096)
+[READDIR] Called for path: /
+[READDIR] Success for: /
+[GETATTR] Called for path: /
+[GETATTR] Success for: / (type: DIR, size: 4096)
+[GETATTR] Called for path: /file3.txt
+[GETATTR] Path not found: /file3.txt
+[GETATTR] Called for path: /hostname.txt
+[GETATTR] Path not found: /hostname.txt
+[GETATTR] Called for path: /large.dat
+[GETATTR] Path not found: /large.dat
+[GETATTR] Called for path: /renamed.txt
+[GETATTR] Path not found: /renamed.txt
+[GETATTR] Called for path: /test.txt
+[GETATTR] Path not found: /test.txt
+[GETATTR] Called for path: /file3.txt
+[GETATTR] Path not found: /file3.txt
+[GETATTR] Called for path: /hostname.txt
+[GETATTR] Path not found: /hostname.txt
+[GETATTR] Called for path: /large.dat
+[GETATTR] Path not found: /large.dat
+[GETATTR] Called for path: /renamed.txt
+[GETATTR] Path not found: /renamed.txt
+[GETATTR] Called for path: /test.txt
+[GETATTR] Path not found: /test.txt
+[READDIR] Called for path: /
+[READDIR] Success for: /
+[GETATTR] Called for path: /
+[GETATTR] Success for: / (type: DIR, size: 4096)
+[READDIR] Called for path: /
+[READDIR] Success for: /
+[GETATTR] Called for path: /enc_test.txt
+[GETATTR] Path not found: /enc_test.txt
+[CREATE] Called for path: /enc_test.txt
+[CREATE] File created successfully: /enc_test.txt (index: 1)
+[GETATTR] Called for path: /enc_test.txt
+[GETATTR] Success for: /enc_test.txt (type: FILE, size: 0)
+[WRITE] Called for path: /enc_test.txt (size: 14, offset: 0)
+[STORAGE] Allocating 4096 bytes for file 1 at offset 0
+[STORAGE] Writing 14 bytes to file 1 at offset 0 (physical: 0)
+[STORAGE] Successfully wrote 14 bytes
+[WRITE] Updated file size to 14
+[WRITE] Successfully wrote 14 bytes to /enc_test.txt
+[GETATTR] Called for path: /enc_test.txt
+[GETATTR] Success for: /enc_test.txt (type: FILE, size: 14)
+[OPEN] Called for path: /enc_test.txt
+[OPEN] Success for: /enc_test.txt
+[READ] Called for path: /enc_test.txt (size: 4096, offset: 0)
+[READ] Adjusted size to 14 to fit file bounds
+[STORAGE] Reading 14 bytes from file 1 at offset 0 (physical: 0)
+[STORAGE] Successfully read 14 bytes (decrypted)
+[READ] Successfully read 14 bytes from /enc_test.txt
+[GETATTR] Called for path: /
+[GETATTR] Success for: / (type: DIR, size: 4096)
+[READDIR] Called for path: /
+[READDIR] Adding entry: enc_test.txt
+[READDIR] Success for: /
+[GETATTR] Called for path: /enc_test.txt
+[GETATTR] Success for: /enc_test.txt (type: FILE, size: 14)
+[GETATTR] Called for path: /
+[GETATTR] Success for: / (type: DIR, size: 4096)
+[GETATTR] Called for path: /file3.txt
+[GETATTR] Path not found: /file3.txt
+[GETATTR] Called for path: /hostname.txt
+[GETATTR] Path not found: /hostname.txt
+[GETATTR] Called for path: /large.dat
+[GETATTR] Path not found: /large.dat
+[GETATTR] Called for path: /renamed.txt
+[GETATTR] Path not found: /renamed.txt
+[GETATTR] Called for path: /test.txt
+[GETATTR] Path not found: /test.txt
+[GETATTR] Called for path: /file3.txt
+[GETATTR] Path not found: /file3.txt
+[GETATTR] Called for path: /hostname.txt
+[GETATTR] Path not found: /hostname.txt
+[GETATTR] Called for path: /large.dat
+[GETATTR] Path not found: /large.dat
+[GETATTR] Called for path: /renamed.txt
+[GETATTR] Path not found: /renamed.txt
+[GETATTR] Called for path: /test.txt
+[GETATTR] Path not found: /test.txt
+[READDIR] Called for path: /
+[READDIR] Adding entry: enc_test.txt
+[READDIR] Success for: /
+[GETATTR] Called for path: /enc_test.txt
+[GETATTR] Success for: /enc_test.txt (type: FILE, size: 14)
+[GETATTR] Called for path: /.gitignore
+[GETATTR] Path not found: /.gitignore
+[GETATTR] Called for path: /enc_test.txt
+[GETATTR] Success for: /enc_test.txt (type: FILE, size: 14)
+[GETATTR] Called for path: /
+[GETATTR] Success for: / (type: DIR, size: 4096)
+[GETATTR] Called for path: /file3.txt
+[GETATTR] Path not found: /file3.txt
+[GETATTR] Called for path: /hostname.txt
+[GETATTR] Path not found: /hostname.txt
+[GETATTR] Called for path: /large.dat
+[GETATTR] Path not found: /large.dat
+[GETATTR] Called for path: /renamed.txt
+[GETATTR] Path not found: /renamed.txt
+[GETATTR] Called for path: /test.txt
+[GETATTR] Path not found: /test.txt
+[GETATTR] Called for path: /file3.txt
+[GETATTR] Path not found: /file3.txt
+[GETATTR] Called for path: /hostname.txt
+[GETATTR] Path not found: /hostname.txt
+[GETATTR] Called for path: /large.dat
+[GETATTR] Path not found: /large.dat
+[GETATTR] Called for path: /renamed.txt
+[GETATTR] Path not found: /renamed.txt
+[GETATTR] Called for path: /test.txt
+[GETATTR] Path not found: /test.txt
+[READDIR] Called for path: /
+[READDIR] Adding entry: enc_test.txt
+[READDIR] Success for: /
+[GETATTR] Called for path: /enc_test.txt
+[GETATTR] Success for: /enc_test.txt (type: FILE, size: 14)
+[GETATTR] Called for path: /.gitignore
+[GETATTR] Path not found: /.gitignore
+[DESTROY] Cleaning up EVFS...
+
+========== FILE TABLE ==========
+IDX | USED | TYPE | NAME
+--------------------------------
+  0 |    1 |  DIR | /
+  1 |    1 | FILE | enc_test.txt
+================================
+
+[STORAGE] Cleaning up storage system...
+[STORAGE] Storage system cleaned up
+[DESTROY] EVFS cleanup complete
+
+==============================================
+  EVFS Unmounted
+==============================================

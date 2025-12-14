@@ -1,0 +1,1829 @@
+FUSE library version: 2.9.9
+nullpath_ok: 0
+nopath: 0
+utime_omit_ok: 0
+unique: 2, opcode: INIT (26), nodeid: 0, insize: 104, pid: 0
+INIT: 7.44
+flags=0x73fffffb
+max_readahead=0x00020000
+   INIT: 7.19
+   flags=0x00000011
+   max_readahead=0x00020000
+   max_write=0x00020000
+   max_background=0
+   congestion_threshold=0
+   unique: 2, success, outsize: 40
+unique: 4, opcode: GETATTR (3), nodeid: 1, insize: 56, pid: 7334
+getattr /
+   unique: 4, success, outsize: 120
+unique: 6, opcode: LOOKUP (1), nodeid: 1, insize: 50, pid: 7334
+LOOKUP /file3.txt
+getattr /file3.txt
+   unique: 6, error: -2 (No such file or directory), outsize: 16
+unique: 8, opcode: LOOKUP (1), nodeid: 1, insize: 53, pid: 7334
+LOOKUP /hostname.txt
+getattr /hostname.txt
+   unique: 8, error: -2 (No such file or directory), outsize: 16
+unique: 10, opcode: LOOKUP (1), nodeid: 1, insize: 50, pid: 7334
+LOOKUP /large.dat
+getattr /large.dat
+   unique: 10, error: -2 (No such file or directory), outsize: 16
+unique: 12, opcode: LOOKUP (1), nodeid: 1, insize: 52, pid: 7334
+LOOKUP /renamed.txt
+getattr /renamed.txt
+   unique: 12, error: -2 (No such file or directory), outsize: 16
+unique: 14, opcode: LOOKUP (1), nodeid: 1, insize: 49, pid: 7334
+LOOKUP /test.txt
+getattr /test.txt
+   unique: 14, error: -2 (No such file or directory), outsize: 16
+unique: 16, opcode: LOOKUP (1), nodeid: 1, insize: 50, pid: 7334
+LOOKUP /file3.txt
+getattr /file3.txt
+   unique: 16, error: -2 (No such file or directory), outsize: 16
+unique: 18, opcode: LOOKUP (1), nodeid: 1, insize: 53, pid: 7334
+LOOKUP /hostname.txt
+getattr /hostname.txt
+   unique: 18, error: -2 (No such file or directory), outsize: 16
+unique: 20, opcode: LOOKUP (1), nodeid: 1, insize: 50, pid: 7334
+LOOKUP /large.dat
+getattr /large.dat
+   unique: 20, error: -2 (No such file or directory), outsize: 16
+unique: 22, opcode: LOOKUP (1), nodeid: 1, insize: 52, pid: 7334
+LOOKUP /renamed.txt
+getattr /renamed.txt
+   unique: 22, error: -2 (No such file or directory), outsize: 16
+unique: 24, opcode: LOOKUP (1), nodeid: 1, insize: 49, pid: 7334
+LOOKUP /test.txt
+getattr /test.txt
+   unique: 24, error: -2 (No such file or directory), outsize: 16
+unique: 26, opcode: OPENDIR (27), nodeid: 1, insize: 48, pid: 7334
+   unique: 26, success, outsize: 32
+unique: 28, opcode: READDIR (28), nodeid: 1, insize: 80, pid: 7334
+readdir[0] from 0
+   unique: 28, success, outsize: 80
+unique: 30, opcode: READDIR (28), nodeid: 1, insize: 80, pid: 7334
+   unique: 30, success, outsize: 16
+unique: 32, opcode: RELEASEDIR (29), nodeid: 1, insize: 64, pid: 0
+   unique: 32, success, outsize: 16
+unique: 34, opcode: GETATTR (3), nodeid: 1, insize: 56, pid: 7339
+getattr /
+   unique: 34, success, outsize: 120
+unique: 36, opcode: LOOKUP (1), nodeid: 1, insize: 50, pid: 7339
+LOOKUP /file3.txt
+getattr /file3.txt
+   unique: 36, error: -2 (No such file or directory), outsize: 16
+unique: 38, opcode: LOOKUP (1), nodeid: 1, insize: 53, pid: 7339
+LOOKUP /hostname.txt
+getattr /hostname.txt
+   unique: 38, error: -2 (No such file or directory), outsize: 16
+unique: 40, opcode: LOOKUP (1), nodeid: 1, insize: 50, pid: 7339
+LOOKUP /large.dat
+getattr /large.dat
+   unique: 40, error: -2 (No such file or directory), outsize: 16
+unique: 42, opcode: LOOKUP (1), nodeid: 1, insize: 52, pid: 7339
+LOOKUP /renamed.txt
+getattr /renamed.txt
+   unique: 42, error: -2 (No such file or directory), outsize: 16
+unique: 44, opcode: LOOKUP (1), nodeid: 1, insize: 49, pid: 7339
+LOOKUP /test.txt
+getattr /test.txt
+   unique: 44, error: -2 (No such file or directory), outsize: 16
+unique: 46, opcode: LOOKUP (1), nodeid: 1, insize: 50, pid: 7339
+LOOKUP /file3.txt
+getattr /file3.txt
+   unique: 46, error: -2 (No such file or directory), outsize: 16
+unique: 48, opcode: LOOKUP (1), nodeid: 1, insize: 53, pid: 7339
+LOOKUP /hostname.txt
+getattr /hostname.txt
+   unique: 48, error: -2 (No such file or directory), outsize: 16
+unique: 50, opcode: LOOKUP (1), nodeid: 1, insize: 50, pid: 7339
+LOOKUP /large.dat
+getattr /large.dat
+   unique: 50, error: -2 (No such file or directory), outsize: 16
+unique: 52, opcode: LOOKUP (1), nodeid: 1, insize: 52, pid: 7339
+LOOKUP /renamed.txt
+getattr /renamed.txt
+   unique: 52, error: -2 (No such file or directory), outsize: 16
+unique: 54, opcode: LOOKUP (1), nodeid: 1, insize: 49, pid: 7339
+LOOKUP /test.txt
+getattr /test.txt
+   unique: 54, error: -2 (No such file or directory), outsize: 16
+unique: 56, opcode: OPENDIR (27), nodeid: 1, insize: 48, pid: 7339
+   unique: 56, success, outsize: 32
+unique: 58, opcode: READDIR (28), nodeid: 1, insize: 80, pid: 7339
+readdir[0] from 0
+   unique: 58, success, outsize: 80
+unique: 60, opcode: READDIR (28), nodeid: 1, insize: 80, pid: 7339
+   unique: 60, success, outsize: 16
+unique: 62, opcode: RELEASEDIR (29), nodeid: 1, insize: 64, pid: 0
+   unique: 62, success, outsize: 16
+unique: 64, opcode: GETATTR (3), nodeid: 1, insize: 56, pid: 7369
+getattr /
+   unique: 64, success, outsize: 120
+unique: 66, opcode: LOOKUP (1), nodeid: 1, insize: 50, pid: 7369
+LOOKUP /file3.txt
+getattr /file3.txt
+   unique: 66, error: -2 (No such file or directory), outsize: 16
+unique: 68, opcode: LOOKUP (1), nodeid: 1, insize: 53, pid: 7369
+LOOKUP /hostname.txt
+getattr /hostname.txt
+   unique: 68, error: -2 (No such file or directory), outsize: 16
+unique: 70, opcode: LOOKUP (1), nodeid: 1, insize: 50, pid: 7369
+LOOKUP /large.dat
+getattr /large.dat
+   unique: 70, error: -2 (No such file or directory), outsize: 16
+unique: 72, opcode: LOOKUP (1), nodeid: 1, insize: 52, pid: 7369
+LOOKUP /renamed.txt
+getattr /renamed.txt
+   unique: 72, error: -2 (No such file or directory), outsize: 16
+unique: 74, opcode: LOOKUP (1), nodeid: 1, insize: 49, pid: 7369
+LOOKUP /test.txt
+getattr /test.txt
+   unique: 74, error: -2 (No such file or directory), outsize: 16
+unique: 76, opcode: LOOKUP (1), nodeid: 1, insize: 50, pid: 7369
+LOOKUP /file3.txt
+getattr /file3.txt
+   unique: 76, error: -2 (No such file or directory), outsize: 16
+unique: 78, opcode: LOOKUP (1), nodeid: 1, insize: 53, pid: 7369
+LOOKUP /hostname.txt
+getattr /hostname.txt
+   unique: 78, error: -2 (No such file or directory), outsize: 16
+unique: 80, opcode: LOOKUP (1), nodeid: 1, insize: 50, pid: 7369
+LOOKUP /large.dat
+getattr /large.dat
+   unique: 80, error: -2 (No such file or directory), outsize: 16
+unique: 82, opcode: LOOKUP (1), nodeid: 1, insize: 52, pid: 7369
+LOOKUP /renamed.txt
+getattr /renamed.txt
+   unique: 82, error: -2 (No such file or directory), outsize: 16
+unique: 84, opcode: LOOKUP (1), nodeid: 1, insize: 49, pid: 7369
+LOOKUP /test.txt
+getattr /test.txt
+   unique: 84, error: -2 (No such file or directory), outsize: 16
+unique: 86, opcode: OPENDIR (27), nodeid: 1, insize: 48, pid: 7369
+   unique: 86, success, outsize: 32
+unique: 88, opcode: READDIR (28), nodeid: 1, insize: 80, pid: 7369
+readdir[0] from 0
+   unique: 88, success, outsize: 80
+unique: 90, opcode: READDIR (28), nodeid: 1, insize: 80, pid: 7369
+   unique: 90, success, outsize: 16
+unique: 92, opcode: RELEASEDIR (29), nodeid: 1, insize: 64, pid: 0
+   unique: 92, success, outsize: 16
+unique: 94, opcode: GETATTR (3), nodeid: 1, insize: 56, pid: 7393
+getattr /
+   unique: 94, success, outsize: 120
+unique: 96, opcode: LOOKUP (1), nodeid: 1, insize: 50, pid: 7393
+LOOKUP /file3.txt
+getattr /file3.txt
+   unique: 96, error: -2 (No such file or directory), outsize: 16
+unique: 98, opcode: LOOKUP (1), nodeid: 1, insize: 53, pid: 7393
+LOOKUP /hostname.txt
+getattr /hostname.txt
+   unique: 98, error: -2 (No such file or directory), outsize: 16
+unique: 100, opcode: LOOKUP (1), nodeid: 1, insize: 50, pid: 7393
+LOOKUP /large.dat
+getattr /large.dat
+   unique: 100, error: -2 (No such file or directory), outsize: 16
+unique: 102, opcode: LOOKUP (1), nodeid: 1, insize: 52, pid: 7393
+LOOKUP /renamed.txt
+getattr /renamed.txt
+   unique: 102, error: -2 (No such file or directory), outsize: 16
+unique: 104, opcode: LOOKUP (1), nodeid: 1, insize: 49, pid: 7393
+LOOKUP /test.txt
+getattr /test.txt
+   unique: 104, error: -2 (No such file or directory), outsize: 16
+unique: 106, opcode: LOOKUP (1), nodeid: 1, insize: 50, pid: 7393
+LOOKUP /file3.txt
+getattr /file3.txt
+==============================================
+  Encrypted Virtual File System (EVFS)
+  CS-352 Operating Systems Course Project
+==============================================
+  Module 1: Basic FUSE Framework
+  - Mounting and unmounting
+  - File system operations
+  - Metadata management
+==============================================
+
+Mount point: -d
+Starting FUSE filesystem...
+
+[INIT] Initializing EVFS...
+[CRYPTO] Initializing AES-256 encryption...
+[CRYPTO] AES-256 initialized successfully
+[METADATA] Initializing filesystem metadata...
+[STORAGE] Initializing storage system...
+[STORAGE] Using existing backing file (size: 12295 bytes)
+[STORAGE] Storage system initialized successfully
+[INIT] File system initialized with root directory
+
+========== FILE TABLE ==========
+IDX | USED | TYPE | NAME
+--------------------------------
+  0 |    1 |  DIR | /
+================================
+
+[GETATTR] Called for path: /
+[GETATTR] Success for: / (type: DIR, size: 4096)
+[GETATTR] Called for path: /file3.txt
+[GETATTR] Path not found: /file3.txt
+[GETATTR] Called for path: /hostname.txt
+[GETATTR] Path not found: /hostname.txt
+[GETATTR] Called for path: /large.dat
+[GETATTR] Path not found: /large.dat
+[GETATTR] Called for path: /renamed.txt
+[GETATTR] Path not found: /renamed.txt
+[GETATTR] Called for path: /test.txt
+[GETATTR] Path not found: /test.txt
+[GETATTR] Called for path: /file3.txt
+[GETATTR] Path not found: /file3.txt
+[GETATTR] Called for path: /hostname.txt
+[GETATTR] Path not found: /hostname.txt
+[GETATTR] Called for path: /large.dat
+[GETATTR] Path not found: /large.dat
+[GETATTR] Called for path: /renamed.txt
+[GETATTR] Path not found: /renamed.txt
+[GETATTR] Called for path: /test.txt
+[GETATTR] Path not found: /test.txt
+[READDIR] Called for path: /
+[READDIR] Success for: /
+[GETATTR] Called for path: /
+[GETATTR] Success for: / (type: DIR, size: 4096)
+[GETATTR] Called for path: /file3.txt
+[GETATTR] Path not found: /file3.txt
+[GETATTR] Called for path: /hostname.txt
+[GETATTR] Path not found: /hostname.txt
+[GETATTR] Called for path: /large.dat
+[GETATTR] Path not found: /large.dat
+[GETATTR] Called for path: /renamed.txt
+[GETATTR] Path not found: /renamed.txt
+[GETATTR] Called for path: /test.txt
+[GETATTR] Path not found: /test.txt
+[GETATTR] Called for path: /file3.txt
+[GETATTR] Path not found: /file3.txt
+[GETATTR] Called for path: /hostname.txt
+[GETATTR] Path not found: /hostname.txt
+[GETATTR] Called for path: /large.dat
+[GETATTR] Path not found: /large.dat
+[GETATTR] Called for path: /renamed.txt
+[GETATTR] Path not found: /renamed.txt
+[GETATTR] Called for path: /test.txt
+[GETATTR] Path not found: /test.txt
+[READDIR] Called for path: /
+[READDIR] Success for: /
+[GETATTR] Called for path: /
+[GETATTR] Success for: / (type: DIR, size: 4096)
+[GETATTR] Called for path: /file3.txt
+[GETATTR] Path not found: /file3.txt
+[GETATTR] Called for path: /hostname.txt
+[GETATTR] Path not found: /hostname.txt
+[GETATTR] Called for path: /large.dat
+[GETATTR] Path not found: /large.dat
+[GETATTR] Called for path: /renamed.txt
+[GETATTR] Path not found: /renamed.txt
+[GETATTR] Called for path: /test.txt
+[GETATTR] Path not found: /test.txt
+[GETATTR] Called for path: /file3.txt
+[GETATTR] Path not found: /file3.txt
+[GETATTR] Called for path: /hostname.txt
+[GETATTR] Path not found: /hostname.txt
+[GETATTR] Called for path: /large.dat
+[GETATTR] Path not found: /large.dat
+[GETATTR] Called for path: /renamed.txt
+[GETATTR] Path not found: /renamed.txt
+[GETATTR] Called for path: /test.txt
+[GETATTR] Path not found: /test.txt
+[READDIR] Called for path: /
+[READDIR] Success for: /
+[GETATTR] Called for path: /
+[GETATTR] Success for: / (type: DIR, size: 4096)
+[GETATTR] Called for path: /file3.txt
+[GETATTR] Path not found: /file3.txt
+[GETATTR] Called for path: /hostname.txt
+[GETATTR] Path not found: /hostname.txt
+[GETATTR] Called for path: /large.dat
+[GETATTR] Path not found: /large.dat
+[GETATTR] Called for path: /renamed.txt
+[GETATTR] Path not found: /renamed.txt
+[GETATTR] Called for path: /test.txt
+[GETATTR] Path not found: /test.txt
+[GETATTR] Called for path: /file3.txt
+[GETATTR] Path   unique: 106, error: -2 (No such file or directory), outsize: 16
+unique: 108, opcode: LOOKUP (1), nodeid: 1, insize: 53, pid: 7393
+LOOKUP /hostname.txt
+getattr /hostname.txt
+   unique: 108, error: -2 (No such file or directory), outsize: 16
+unique: 110, opcode: LOOKUP (1), nodeid: 1, insize: 50, pid: 7393
+LOOKUP /large.dat
+getattr /large.dat
+   unique: 110, error: -2 (No such file or directory), outsize: 16
+unique: 112, opcode: LOOKUP (1), nodeid: 1, insize: 52, pid: 7393
+LOOKUP /renamed.txt
+getattr /renamed.txt
+   unique: 112, error: -2 (No such file or directory), outsize: 16
+unique: 114, opcode: LOOKUP (1), nodeid: 1, insize: 49, pid: 7393
+LOOKUP /test.txt
+getattr /test.txt
+   unique: 114, error: -2 (No such file or directory), outsize: 16
+unique: 116, opcode: OPENDIR (27), nodeid: 1, insize: 48, pid: 7393
+   unique: 116, success, outsize: 32
+unique: 118, opcode: READDIR (28), nodeid: 1, insize: 80, pid: 7393
+readdir[0] from 0
+   unique: 118, success, outsize: 80
+unique: 120, opcode: READDIR (28), nodeid: 1, insize: 80, pid: 7393
+   unique: 120, success, outsize: 16
+unique: 122, opcode: RELEASEDIR (29), nodeid: 1, insize: 64, pid: 0
+   unique: 122, success, outsize: 16
+unique: 124, opcode: GETATTR (3), nodeid: 1, insize: 56, pid: 7433
+getattr /
+   unique: 124, success, outsize: 120
+unique: 126, opcode: LOOKUP (1), nodeid: 1, insize: 50, pid: 7433
+LOOKUP /file3.txt
+getattr /file3.txt
+   unique: 126, error: -2 (No such file or directory), outsize: 16
+unique: 128, opcode: LOOKUP (1), nodeid: 1, insize: 53, pid: 7433
+LOOKUP /hostname.txt
+getattr /hostname.txt
+   unique: 128, error: -2 (No such file or directory), outsize: 16
+unique: 130, opcode: LOOKUP (1), nodeid: 1, insize: 50, pid: 7433
+LOOKUP /large.dat
+getattr /large.dat
+   unique: 130, error: -2 (No such file or directory), outsize: 16
+unique: 132, opcode: LOOKUP (1), nodeid: 1, insize: 52, pid: 7433
+LOOKUP /renamed.txt
+getattr /renamed.txt
+   unique: 132, error: -2 (No such file or directory), outsize: 16
+unique: 134, opcode: LOOKUP (1), nodeid: 1, insize: 49, pid: 7433
+LOOKUP /test.txt
+getattr /test.txt
+   unique: 134, error: -2 (No such file or directory), outsize: 16
+unique: 136, opcode: LOOKUP (1), nodeid: 1, insize: 50, pid: 7433
+LOOKUP /file3.txt
+getattr /file3.txt
+   unique: 136, error: -2 (No such file or directory), outsize: 16
+unique: 138, opcode: LOOKUP (1), nodeid: 1, insize: 53, pid: 7433
+LOOKUP /hostname.txt
+getattr /hostname.txt
+   unique: 138, error: -2 (No such file or directory), outsize: 16
+unique: 140, opcode: LOOKUP (1), nodeid: 1, insize: 50, pid: 7433
+LOOKUP /large.dat
+getattr /large.dat
+   unique: 140, error: -2 (No such file or directory), outsize: 16
+unique: 142, opcode: LOOKUP (1), nodeid: 1, insize: 52, pid: 7433
+LOOKUP /renamed.txt
+getattr /renamed.txt
+   unique: 142, error: -2 (No such file or directory), outsize: 16
+unique: 144, opcode: LOOKUP (1), nodeid: 1, insize: 49, pid: 7433
+LOOKUP /test.txt
+getattr /test.txt
+   unique: 144, error: -2 (No such file or directory), outsize: 16
+unique: 146, opcode: OPENDIR (27), nodeid: 1, insize: 48, pid: 7433
+   unique: 146, success, outsize: 32
+unique: 148, opcode: READDIR (28), nodeid: 1, insize: 80, pid: 7433
+readdir[0] from 0
+   unique: 148, success, outsize: 80
+unique: 150, opcode: READDIR (28), nodeid: 1, insize: 80, pid: 7433
+   unique: 150, success, outsize: 16
+unique: 152, opcode: RELEASEDIR (29), nodeid: 1, insize: 64, pid: 0
+   unique: 152, success, outsize: 16
+unique: 154, opcode: GETATTR (3), nodeid: 1, insize: 56, pid: 7500
+getattr /
+   unique: 154, success, outsize: 120
+unique: 156, opcode: LOOKUP (1), nodeid: 1, insize: 50, pid: 7500
+LOOKUP /file3.txt
+getattr /file3.txt
+   unique: 156, error: -2 (No such file or directory), outsize: 16
+unique: 158, opcode: LOOKUP (1), nodeid: 1, insize: 53, pid: 7500
+LOOKUP /hostname.txt
+getattr /hostname.txt
+   unique: 158, error: -2 (No such file or directory), outsize: 16
+unique: 160, opcode: LOOKUP (1), nodeid: 1, insize: 50, pid: 7500
+LOOKUP /large.dat
+getattr /large.dat
+   unique: 160, error: -2 (No such file or directory), outsize: 16
+unique: 162, opcode: LOOKUP (1), nodeid: 1, insize: 52, pid: 7500
+LOOKUP /renamed.txt
+getattr /renamed.txt
+   unique: 162, error: -2 (No such file or directory), outsize: 16
+unique: 164, opcode: LOOKUP (1), nodeid: 1, insize: 49, pid: 7500
+LOOKUP /test.txt
+getattr /test.txt
+   unique: 164, error: -2 (No such file or directory), outsize: 16
+unique: 166, opcode: LOOKUP (1), nodeid: 1, insize: 50, pid: 7500
+LOOKUP /file3.txt
+getattr /file3.txt
+   unique: 166, error: -2 (No such file or directory), outsize: 16
+unique: 168, opcode: LOOKUP (1), nodeid: 1, insize: 53, pid: 7500
+LOOKUP /hostname.txt
+getattr /hostname.txt
+   unique: 168, error: -2 (No such file or directory), outsize: 16
+unique: 170, opcode: LOOKUP (1), nodeid: 1, insize: 50, pid: 7500
+LOOKUP /large.dat
+getattr /large.dat
+   unique: 170, error: -2 (No such file or directory), outsize: 16
+unique: 172, opcode: LOOKUP (1), nodeid: 1, insize: 52, pid: 7500
+LOOKUP /renamed.txt
+getattr /renamed.txt
+   unique: 172, error: -2 (No such file or directory), outsize: 16
+unique: 174, opcode: LOOKUP (1), nodeid: 1, insize: 49, pid: 7500
+LOOKUP /test.txt
+getattr /test.txt
+   unique: 174, error: -2 (No such file or directory), outsize: 16
+unique: 176, opcode: OPENDIR (27), nodeid: 1, insize: 48, pid: 7500
+   unique: 176, success, outsize: 32
+unique: 178, opcode: READDIR (28), nodeid: 1, insize: 80, pid: 7500
+readdir[0] from 0
+   unique: 178, success, outsize: 80
+unique: 180, opcode: READDIR (28), nodeid: 1, insize: 80, pid: 7500
+   unique: 180, success, outsize: 16
+unique: 182, opcode: RELEASEDIR (29), nodeid: 1, insize: 64, pid: 0
+   unique: 182, success, outsize: 16
+unique: 184, opcode: GETATTR (3), nodeid: 1, insize: 56, pid: 7523
+getattr /
+   unique: 184, success, outsize: 120
+unique: 186, opcode: LOOKUP (1), nodeid: 1, insize: 50, pid: 7523
+LOOKUP /file3.txt
+getattr /file3.txt
+   unique: 186, error: -2 (No such file or directory), outsize: 16
+unique: 188, opcode: LOOKUP (1), nodeid: 1, insize: 53, pid: 7523
+LOOKUP /hostname.txt
+getattr /hostname.txt
+   unique: 188, error: -2 (No such file or directory), outsize: 16
+unique: 190, opcode: LOOKUP (1), nodeid: 1, insize: 50, pid: 7523
+LOOKUP /large.dat
+getattr /large.dat
+   unique: 190, error: -2 (No such file or directory), outsize: 16
+unique: 192, opcode: LOOKUP (1), nodeid: 1, insize: 52, pid: 7523
+LOOKUP /renamed.txt
+getattr /renamed.txt
+   unique: 192, error: -2 (No such file or directory), outsize: 16
+unique: 194, opcode: LOOKUP (1), nodeid: 1, insize: 49, pid: 7523
+LOOKUP /test.txt
+getattr /test.txt
+   unique: 194, error: -2 (No such file or directory), outsize: 16
+unique: 196, opcode: LOOKUP (1), nodeid: 1, insize: 50, pid: 7523
+LOOKUP /file3.txt
+getattr /file3.txt
+   unique: 196, error: -2 (No such file or directory), outsize: 16
+unique: 198, opcode: LOOKUP (1), nodeid: 1, insize: 53, pid: 7523
+LOOKUP /hostname.txt
+getattr /hostname.txt
+   unique: 198, error: -2 (No such file or directory), outsize: 16
+unique: 200, opcode: LOOKUP (1), nodeid: 1, insize: 50, pid: 7523
+LOOKUP /large.dat
+getattr /large.dat
+   unique: 200, error: -2 (No such file or directory), outsize: 16
+unique: 202, opcode: LOOKUP (1), nodeid: 1, insize: 52, pid: 7523
+LOOKUP /renamed.txt
+getattr /renamed.txt
+   unique: 202, error: -2 (No such file or directory), outsize: 16
+unique: 204, opcode: LOOKUP (1), nodeid: 1, insize: 49, pid: 7523
+LOOKUP /test.txt
+getattr /test.txt
+   unique: 204, error: -2 (No such file or directory), outsize: 16
+unique: 206, opcode: OPENDIR (27), nodeid: 1, insize: 48, pid: 7523
+   unique: 206, success, outsize: 32
+unique: 208, opcode: READDIR (28), nodeid: 1, insize: 80, pid: 7523
+readdir[0] from 0
+   unique: 208, success, outsize: 80
+unique: 210, opcode: READDIR (28), nodeid: 1, insize: 80, pid: 7523
+   unique: 210, success, outsize: 16
+unique: 212, opcode: RELEASEDIR (29), nodeid: 1, insize: 64, pid: 0
+   unique: 212, success, outsize: 16
+unique: 214, opcode: LOOKUP (1), nodeid: 1, insize: 49, pid: 7414
+LOOKUP /test.txt
+getattr /test.txt
+   unique: 214, error: -2 (No such file or directory), outsize: 16
+unique: 216, opcode: CREATE (35), nodeid: 1, insize: 65, pid: 7414
+create flags: 0x8241 /test.txt 0100664 umask=0002
+   create[0] flags: 0x8241 /test.txt
+getattr /test.txt
+   NODEID: 2
+   unique: 216, success, outsize: 160
+unique: 218, opcode: FLUSH (25), nodeid: 2, insize: 64, pid: 7414
+   unique: 218, error: -38 (Function not implemented), outsize: 16
+unique: 220, opcode: GETXATTR (22), nodeid: 2, insize: 68, pid: 7414
+   unique: 220, error: -38 (Function not implemented), outsize: 16
+unique: 222, opcode: WRITE (16), nodeid: 2, insize: 85, pid: 7414
+write[0] 5 bytes to 0 flags: 0x8001
+   write[0] 5 bytes to 0
+   unique: 222, success, outsize: 24
+unique: 224, opcode: RELEASE (18), nodeid: 2, insize: 64, pid: 0
+   unique: 224, success, outsize: 16
+unique: 226, opcode: LOOKUP (1), nodeid: 1, insize: 49, pid: 4450
+LOOKUP /test.txt
+getattr /test.txt
+   NODEID: 2
+   unique: 226, success, outsize: 144
+unique: 228, opcode: ??? (52), nodeid: 2, insize: 64, pid: 4450
+   unique: 228, error: -38 (Function not implemented), outsize: 16
+unique: 230, opcode: GETATTR (3), nodeid: 1, insize: 56, pid: 7570
+getattr /
+   unique: 230, success, outsize: 120
+unique: 232, opcode: LOOKUP (1), nodeid: 1, insize: 50, pid: 7570
+LOOKUP /file3.txt
+getattr /file3.txt
+   unique: 232, error: -2 (No such file or directory), outsize: 16
+unique: 234, opcode: LOOKUP (1), nodeid: 1, insize: 53, pid: 7570
+LOOKUP /hostname.txt
+getattr /hostname.txt
+   unique: 234, error: -2 (No such file or directory), outsize: 16
+unique: 236, opcode: LOOKUP (1), nodeid: 1, insize: 50, pid: 7570
+LOOKUP /large.dat
+getattr /large.dat
+ not found: /file3.txt
+[GETATTR] Called for path: /hostname.txt
+[GETATTR] Path not found: /hostname.txt
+[GETATTR] Called for path: /large.dat
+[GETATTR] Path not found: /large.dat
+[GETATTR] Called for path: /renamed.txt
+[GETATTR] Path not found: /renamed.txt
+[GETATTR] Called for path: /test.txt
+[GETATTR] Path not found: /test.txt
+[READDIR] Called for path: /
+[READDIR] Success for: /
+[GETATTR] Called for path: /
+[GETATTR] Success for: / (type: DIR, size: 4096)
+[GETATTR] Called for path: /file3.txt
+[GETATTR] Path not found: /file3.txt
+[GETATTR] Called for path: /hostname.txt
+[GETATTR] Path not found: /hostname.txt
+[GETATTR] Called for path: /large.dat
+[GETATTR] Path not found: /large.dat
+[GETATTR] Called for path: /renamed.txt
+[GETATTR] Path not found: /renamed.txt
+[GETATTR] Called for path: /test.txt
+[GETATTR] Path not found: /test.txt
+[GETATTR] Called for path: /file3.txt
+[GETATTR] Path not found: /file3.txt
+[GETATTR] Called for path: /hostname.txt
+[GETATTR] Path not found: /hostname.txt
+[GETATTR] Called for path: /large.dat
+[GETATTR] Path not found: /large.dat
+[GETATTR] Called for path: /renamed.txt
+[GETATTR] Path not found: /renamed.txt
+[GETATTR] Called for path: /test.txt
+[GETATTR] Path not found: /test.txt
+[READDIR] Called for path: /
+[READDIR] Success for: /
+[GETATTR] Called for path: /
+[GETATTR] Success for: / (type: DIR, size: 4096)
+[GETATTR] Called for path: /file3.txt
+[GETATTR] Path not found: /file3.txt
+[GETATTR] Called for path: /hostname.txt
+[GETATTR] Path not found: /hostname.txt
+[GETATTR] Called for path: /large.dat
+[GETATTR] Path not found: /large.dat
+[GETATTR] Called for path: /renamed.txt
+[GETATTR] Path not found: /renamed.txt
+[GETATTR] Called for path: /test.txt
+[GETATTR] Path not found: /test.txt
+[GETATTR] Called for path: /file3.txt
+[GETATTR] Path not found: /file3.txt
+[GETATTR] Called for path: /hostname.txt
+[GETATTR] Path not found: /hostname.txt
+[GETATTR] Called for path: /large.dat
+[GETATTR] Path not found: /large.dat
+[GETATTR] Called for path: /renamed.txt
+[GETATTR] Path not found: /renamed.txt
+[GETATTR] Called for path: /test.txt
+[GETATTR] Path not found: /test.txt
+[READDIR] Called for path: /
+[READDIR] Success for: /
+[GETATTR] Called for path: /
+[GETATTR] Success for: / (type: DIR, size: 4096)
+[GETATTR] Called for path: /file3.txt
+[GETATTR] Path not found: /file3.txt
+[GETATTR] Called for path: /hostname.txt
+[GETATTR] Path not found: /hostname.txt
+[GETATTR] Called for path: /large.dat
+[GETATTR] Path not found: /large.dat
+[GETATTR] Called for path: /renamed.txt
+[GETATTR] Path not found: /renamed.txt
+[GETATTR] Called for path: /test.txt
+[GETATTR] Path not found: /test.txt
+[GETATTR] Called for path: /file3.txt
+[GETATTR] Path not found: /file3.txt
+[GETATTR] Called for path: /hostname.txt
+[GETATTR] Path not found: /hostname.txt
+[GETATTR] Called for path: /large.dat
+[GETATTR] Path not found: /large.dat
+[GETATTR] Called for path: /renamed.txt
+[GETATTR] Path not found: /renamed.txt
+[GETATTR] Called for path: /test.txt
+[GETATTR] Path not found: /test.txt
+[READDIR] Called for path: /
+[READDIR] Success for: /
+[GETATTR] Called for path: /test.txt
+[GETATTR] Path not found: /test.txt
+[CREATE] Called for path: /test.txt
+[CREATE] File created successfully: /test.txt (index: 1)
+[GETATTR] Called for path: /test.txt
+[GETATTR] Success for: /test.txt (type: FILE, size: 0)
+[WRITE] Called for path: /test.txt (size: 5, offset: 0)
+[STORAGE] Allocating 4096 bytes for file 1 at offset 12295
+[STORAGE] Writing 5 bytes to file 1 at offset 0 (physical: 12295)
+[STORAGE] Original size: 5, Padded size: 16
+[CRYPTO] Encrypted 5 bytes (padded to 16)
+[STORAGE] Successfully wrote 5 bytes (encrypted)
+[WRITE] Updated file size to 5
+[WRITE] Successfully wrote 5 bytes to /test.txt
+[GETATTR] Called for path: /test.txt
+[GETATTR] Success for: /test.txt (type: FILE, size: 5)
+[GETATTR] Called for path: /
+[GETATTR] Success for: / (type: DIR, size: 4096)
+[GETATTR] Called for path: /file3.txt
+[GETATTR] Path not found: /file3.txt
+[GETATTR] Called for path: /hostname.txt
+[GETATTR] Path not found: /hostname.txt
+[GETATTR] Called for path: /large.dat
+   unique: 236, error: -2 (No such file or directory), outsize: 16
+unique: 238, opcode: LOOKUP (1), nodeid: 1, insize: 52, pid: 7570
+LOOKUP /renamed.txt
+getattr /renamed.txt
+   unique: 238, error: -2 (No such file or directory), outsize: 16
+unique: 240, opcode: LOOKUP (1), nodeid: 1, insize: 49, pid: 7570
+LOOKUP /test.txt
+getattr /test.txt
+   NODEID: 2
+   unique: 240, success, outsize: 144
+unique: 242, opcode: LOOKUP (1), nodeid: 1, insize: 50, pid: 7570
+LOOKUP /file3.txt
+getattr /file3.txt
+   unique: 242, error: -2 (No such file or directory), outsize: 16
+unique: 244, opcode: LOOKUP (1), nodeid: 1, insize: 53, pid: 7570
+LOOKUP /hostname.txt
+getattr /hostname.txt
+   unique: 244, error: -2 (No such file or directory), outsize: 16
+unique: 246, opcode: LOOKUP (1), nodeid: 1, insize: 50, pid: 7570
+LOOKUP /large.dat
+getattr /large.dat
+   unique: 246, error: -2 (No such file or directory), outsize: 16
+unique: 248, opcode: LOOKUP (1), nodeid: 1, insize: 52, pid: 7570
+LOOKUP /renamed.txt
+getattr /renamed.txt
+   unique: 248, error: -2 (No such file or directory), outsize: 16
+unique: 250, opcode: OPENDIR (27), nodeid: 1, insize: 48, pid: 7570
+   unique: 250, success, outsize: 32
+unique: 252, opcode: READDIR (28), nodeid: 1, insize: 80, pid: 7570
+readdir[0] from 0
+   unique: 252, success, outsize: 112
+unique: 254, opcode: READDIR (28), nodeid: 1, insize: 80, pid: 7570
+   unique: 254, success, outsize: 16
+unique: 256, opcode: RELEASEDIR (29), nodeid: 1, insize: 64, pid: 0
+   unique: 256, success, outsize: 16
+unique: 258, opcode: GETATTR (3), nodeid: 1, insize: 56, pid: 7597
+getattr /
+   unique: 258, success, outsize: 120
+unique: 260, opcode: LOOKUP (1), nodeid: 1, insize: 50, pid: 7597
+LOOKUP /file3.txt
+getattr /file3.txt
+   unique: 260, error: -2 (No such file or directory), outsize: 16
+unique: 262, opcode: LOOKUP (1), nodeid: 1, insize: 53, pid: 7597
+LOOKUP /hostname.txt
+getattr /hostname.txt
+   unique: 262, error: -2 (No such file or directory), outsize: 16
+unique: 264, opcode: LOOKUP (1), nodeid: 1, insize: 50, pid: 7597
+LOOKUP /large.dat
+getattr /large.dat
+   unique: 264, error: -2 (No such file or directory), outsize: 16
+unique: 266, opcode: LOOKUP (1), nodeid: 1, insize: 52, pid: 7597
+LOOKUP /renamed.txt
+getattr /renamed.txt
+   unique: 266, error: -2 (No such file or directory), outsize: 16
+unique: 268, opcode: LOOKUP (1), nodeid: 1, insize: 49, pid: 7597
+LOOKUP /test.txt
+getattr /test.txt
+   NODEID: 2
+   unique: 268, success, outsize: 144
+unique: 270, opcode: LOOKUP (1), nodeid: 1, insize: 50, pid: 7597
+LOOKUP /file3.txt
+getattr /file3.txt
+   unique: 270, error: -2 (No such file or directory), outsize: 16
+unique: 272, opcode: LOOKUP (1), nodeid: 1, insize: 53, pid: 7597
+LOOKUP /hostname.txt
+getattr /hostname.txt
+   unique: 272, error: -2 (No such file or directory), outsize: 16
+unique: 274, opcode: LOOKUP (1), nodeid: 1, insize: 50, pid: 7597
+LOOKUP /large.dat
+getattr /large.dat
+   unique: 274, error: -2 (No such file or directory), outsize: 16
+unique: 276, opcode: LOOKUP (1), nodeid: 1, insize: 52, pid: 7597
+LOOKUP /renamed.txt
+getattr /renamed.txt
+   unique: 276, error: -2 (No such file or directory), outsize: 16
+unique: 278, opcode: OPENDIR (27), nodeid: 1, insize: 48, pid: 7597
+   unique: 278, success, outsize: 32
+unique: 280, opcode: READDIR (28), nodeid: 1, insize: 80, pid: 7597
+readdir[0] from 0
+   unique: 280, success, outsize: 112
+unique: 282, opcode: READDIR (28), nodeid: 1, insize: 80, pid: 7597
+   unique: 282, success, outsize: 16
+unique: 284, opcode: RELEASEDIR (29), nodeid: 1, insize: 64, pid: 0
+   unique: 284, success, outsize: 16
+unique: 286, opcode: GETATTR (3), nodeid: 1, insize: 56, pid: 7621
+getattr /
+   unique: 286, success, outsize: 120
+unique: 288, opcode: LOOKUP (1), nodeid: 1, insize: 50, pid: 7621
+LOOKUP /file3.txt
+getattr /file3.txt
+   unique: 288, error: -2 (No such file or directory), outsize: 16
+unique: 290, opcode: LOOKUP (1), nodeid: 1, insize: 53, pid: 7621
+LOOKUP /hostname.txt
+getattr /hostname.txt
+   unique: 290, error: -2 (No such file or directory), outsize: 16
+unique: 292, opcode: LOOKUP (1), nodeid: 1, insize: 50, pid: 7621
+LOOKUP /large.dat
+getattr /large.dat
+   unique: 292, error: -2 (No such file or directory), outsize: 16
+unique: 294, opcode: LOOKUP (1), nodeid: 1, insize: 52, pid: 7621
+LOOKUP /renamed.txt
+getattr /renamed.txt
+   unique: 294, error: -2 (No such file or directory), outsize: 16
+unique: 296, opcode: LOOKUP (1), nodeid: 1, insize: 49, pid: 7621
+LOOKUP /test.txt
+getattr /test.txt
+   NODEID: 2
+   unique: 296, success, outsize: 144
+unique: 298, opcode: LOOKUP (1), nodeid: 1, insize: 50, pid: 7621
+LOOKUP /file3.txt
+getattr /file3.txt
+   unique: 298, error: -2 (No such file or directory), outsize: 16
+unique: 300, opcode: LOOKUP (1), nodeid: 1, insize: 53, pid: 7621
+LOOKUP /hostname.txt
+getattr /hostname.txt
+   unique: 300, error: -2 (No such file or directory), outsize: 16
+unique: 302, opcode: LOOKUP (1), nodeid: 1, insize: 50, pid: 7621
+LOOKUP /large.dat
+getattr /large.dat
+   unique: 302, error: -2 (No such file or directory), outsize: 16
+unique: 304, opcode: LOOKUP (1), nodeid: 1, insize: 52, pid: 7621
+LOOKUP /renamed.txt
+getattr /renamed.txt
+   unique: 304, error: -2 (No such file or directory), outsize: 16
+unique: 306, opcode: OPENDIR (27), nodeid: 1, insize: 48, pid: 7621
+   unique: 306, success, outsize: 32
+unique: 308, opcode: READDIR (28), nodeid: 1, insize: 80, pid: 7621
+readdir[0] from 0
+   unique: 308, success, outsize: 112
+unique: 310, opcode: READDIR (28), nodeid: 1, insize: 80, pid: 7621
+   unique: 310, success, outsize: 16
+unique: 312, opcode: RELEASEDIR (29), nodeid: 1, insize: 64, pid: 0
+   unique: 312, success, outsize: 16
+unique: 314, opcode: GETATTR (3), nodeid: 1, insize: 56, pid: 7669
+getattr /
+   unique: 314, success, outsize: 120
+unique: 316, opcode: LOOKUP (1), nodeid: 1, insize: 50, pid: 7669
+LOOKUP /file3.txt
+getattr /file3.txt
+   unique: 316, error: -2 (No such file or directory), outsize: 16
+unique: 318, opcode: LOOKUP (1), nodeid: 1, insize: 53, pid: 7669
+LOOKUP /hostname.txt
+getattr /hostname.txt
+   unique: 318, error: -2 (No such file or directory), outsize: 16
+unique: 320, opcode: LOOKUP (1), nodeid: 1, insize: 50, pid: 7669
+LOOKUP /large.dat
+getattr /large.dat
+   unique: 320, error: -2 (No such file or directory), outsize: 16
+unique: 322, opcode: LOOKUP (1), nodeid: 1, insize: 52, pid: 7669
+LOOKUP /renamed.txt
+getattr /renamed.txt
+   unique: 322, error: -2 (No such file or directory), outsize: 16
+unique: 324, opcode: LOOKUP (1), nodeid: 1, insize: 49, pid: 7669
+LOOKUP /test.txt
+getattr /test.txt
+   NODEID: 2
+   unique: 324, success, outsize: 144
+unique: 326, opcode: LOOKUP (1), nodeid: 1, insize: 50, pid: 7669
+LOOKUP /file3.txt
+getattr /file3.txt
+   unique: 326, error: -2 (No such file or directory), outsize: 16
+unique: 328, opcode: LOOKUP (1), nodeid: 1, insize: 53, pid: 7669
+LOOKUP /hostname.txt
+getattr /hostname.txt
+   unique: 328, error: -2 (No such file or directory), outsize: 16
+unique: 330, opcode: LOOKUP (1), nodeid: 1, insize: 50, pid: 7669
+LOOKUP /large.dat
+getattr /large.dat
+   unique: 330, error: -2 (No such file or directory), outsize: 16
+unique: 332, opcode: LOOKUP (1), nodeid: 1, insize: 52, pid: 7669
+LOOKUP /renamed.txt
+getattr /renamed.txt
+   unique: 332, error: -2 (No such file or directory), outsize: 16
+unique: 334, opcode: OPENDIR (27), nodeid: 1, insize: 48, pid: 7669
+   unique: 334, success, outsize: 32
+unique: 336, opcode: READDIR (28), nodeid: 1, insize: 80, pid: 7669
+readdir[0] from 0
+   unique: 336, success, outsize: 112
+unique: 338, opcode: READDIR (28), nodeid: 1, insize: 80, pid: 7669
+   unique: 338, success, outsize: 16
+unique: 340, opcode: RELEASEDIR (29), nodeid: 1, insize: 64, pid: 0
+   unique: 340, success, outsize: 16
+unique: 342, opcode: GETATTR (3), nodeid: 1, insize: 56, pid: 7697
+getattr /
+   unique: 342, success, outsize: 120
+unique: 344, opcode: LOOKUP (1), nodeid: 1, insize: 50, pid: 7697
+LOOKUP /file3.txt
+getattr /file3.txt
+   unique: 344, error: -2 (No such file or directory), outsize: 16
+unique: 346, opcode: LOOKUP (1), nodeid: 1, insize: 53, pid: 7697
+LOOKUP /hostname.txt
+getattr /hostname.txt
+   unique: 346, error: -2 (No such file or directory), outsize: 16
+unique: 348, opcode: LOOKUP (1), nodeid: 1, insize: 50, pid: 7697
+LOOKUP /large.dat
+getattr /large.dat
+   unique: 348, error: -2 (No such file or directory), outsize: 16
+unique: 350, opcode: LOOKUP (1), nodeid: 1, insize: 52, pid: 7697
+LOOKUP /renamed.txt
+getattr /renamed.txt
+   unique: 350, error: -2 (No such file or directory), outsize: 16
+unique: 352, opcode: LOOKUP (1), nodeid: 1, insize: 49, pid: 7697
+LOOKUP /test.txt
+getattr /test.txt
+   NODEID: 2
+   unique: 352, success, outsize: 144
+unique: 354, opcode: LOOKUP (1), nodeid: 1, insize: 50, pid: 7697
+LOOKUP /file3.txt
+getattr /file3.txt
+   unique: 354, error: -2 (No such file or directory), outsize: 16
+unique: 356, opcode: LOOKUP (1), nodeid: 1, insize: 53, pid: 7697
+LOOKUP /hostname.txt
+getattr /hostname.txt
+   unique: 356, error: -2 (No such file or directory), outsize: 16
+unique: 358, opcode: LOOKUP (1), nodeid: 1, insize: 50, pid: 7697
+LOOKUP /large.dat
+getattr /large.dat
+   unique: 358, error: -2 (No such file or directory), outsize: 16
+unique: 360, opcode: LOOKUP (1), nodeid: 1, insize: 52, pid: 7697
+LOOKUP /renamed.txt
+getattr /renamed.txt
+   unique: 360, error: -2 (No such file or directory), outsize: 16
+unique: 362, opcode: OPENDIR (27), nodeid: 1, insize: 48, pid: 7697
+   unique: 362, success, outsize: 32
+unique: 364, opcode: READDIR (28), nodeid: 1, insize: 80, pid: 7697
+readdir[0] from 0
+[GETATTR] Path not found: /large.dat
+[GETATTR] Called for path: /renamed.txt
+[GETATTR] Path not found: /renamed.txt
+[GETATTR] Called for path: /test.txt
+[GETATTR] Success for: /test.txt (type: FILE, size: 5)
+[GETATTR] Called for path: /file3.txt
+[GETATTR] Path not found: /file3.txt
+[GETATTR] Called for path: /hostname.txt
+[GETATTR] Path not found: /hostname.txt
+[GETATTR] Called for path: /large.dat
+[GETATTR] Path not found: /large.dat
+[GETATTR] Called for path: /renamed.txt
+[GETATTR] Path not found: /renamed.txt
+[READDIR] Called for path: /
+[READDIR] Adding entry: test.txt
+[READDIR] Success for: /
+[GETATTR] Called for path: /
+[GETATTR] Success for: / (type: DIR, size: 4096)
+[GETATTR] Called for path: /file3.txt
+[GETATTR] Path not found: /file3.txt
+[GETATTR] Called for path: /hostname.txt
+[GETATTR] Path not found: /hostname.txt
+[GETATTR] Called for path: /large.dat
+[GETATTR] Path not found: /large.dat
+[GETATTR] Called for path: /renamed.txt
+[GETATTR] Path not found: /renamed.txt
+[GETATTR] Called for path: /test.txt
+[GETATTR] Success for: /test.txt (type: FILE, size: 5)
+[GETATTR] Called for path: /file3.txt
+[GETATTR] Path not found: /file3.txt
+[GETATTR] Called for path: /hostname.txt
+[GETATTR] Path not found: /hostname.txt
+[GETATTR] Called for path: /large.dat
+[GETATTR] Path not found: /large.dat
+[GETATTR] Called for path: /renamed.txt
+[GETATTR] Path not found: /renamed.txt
+[READDIR] Called for path: /
+[READDIR] Adding entry: test.txt
+[READDIR] Success for: /
+[GETATTR] Called for path: /
+[GETATTR] Success for: / (type: DIR, size: 4096)
+[GETATTR] Called for path: /file3.txt
+[GETATTR] Path not found: /file3.txt
+[GETATTR] Called for path: /hostname.txt
+[GETATTR] Path not found: /hostname.txt
+[GETATTR] Called for path: /large.dat
+[GETATTR] Path not found: /large.dat
+[GETATTR] Called for path: /renamed.txt
+[GETATTR] Path not found: /renamed.txt
+[GETATTR] Called for path: /test.txt
+[GETATTR] Success for: /test.txt (type: FILE, size: 5)
+[GETATTR] Called for path: /file3.txt
+[GETATTR] Path not found: /file3.txt
+[GETATTR] Called for path: /hostname.txt
+[GETATTR] Path not found: /hostname.txt
+[GETATTR] Called for path: /large.dat
+[GETATTR] Path not found: /large.dat
+[GETATTR] Called for path: /renamed.txt
+[GETATTR] Path not found: /renamed.txt
+[READDIR] Called for path: /
+[READDIR] Adding entry: test.txt
+[READDIR] Success for: /
+[GETATTR] Called for path: /
+[GETATTR] Success for: / (type: DIR, size: 4096)
+[GETATTR] Called for path: /file3.txt
+[GETATTR] Path not found: /file3.txt
+[GETATTR] Called for path: /hostname.txt
+[GETATTR] Path not found: /hostname.txt
+[GETATTR] Called for path: /large.dat
+[GETATTR] Path not found: /large.dat
+[GETATTR] Called for path: /renamed.txt
+[GETATTR] Path not found: /renamed.txt
+[GETATTR] Called for path: /test.txt
+[GETATTR] Success for: /test.txt (type: FILE, size: 5)
+[GETATTR] Called for path: /file3.txt
+[GETATTR] Path not found: /file3.txt
+[GETATTR] Called for path: /hostname.txt
+[GETATTR] Path not found: /hostname.txt
+[GETATTR] Called for path: /large.dat
+[GETATTR] Path not found: /large.dat
+[GETATTR] Called for path: /renamed.txt
+[GETATTR] Path not found: /renamed.txt
+[READDIR] Called for path: /
+[READDIR] Adding entry: test.txt
+[READDIR] Success for: /
+[GETATTR] Called for path: /
+[GETATTR] Success for: / (type: DIR, size: 4096)
+[GETATTR] Called for path: /file3.txt
+[GETATTR] Path not found: /file3.txt
+[GETATTR] Called for path: /hostname.txt
+[GETATTR] Path not found: /hostname.txt
+[GETATTR] Called for path: /large.dat
+[GETATTR] Path not found: /large.dat
+[GETATTR] Called for path: /renamed.txt
+[GETATTR] Path not found: /renamed.txt
+[GETATTR] Called for path: /test.txt
+[GETATTR] Success for: /test.txt (type: FILE, size: 5)
+[GETATTR] Called for path: /file3.txt
+[GETATTR] Path not found: /file3.txt
+[GETATTR] Called for path: /hostname.txt
+[GETATTR] Path not found: /hostname.txt
+[GETATTR] Called for path: /large.dat
+[GETATTR] Path not found: /large.dat
+[GETATTR] Called for path: /renamed.txt
+[GETATTR] Path not found: /renamed.txt
+[READDIR] Called for path: /
+[READDIR] Adding entry: test.txt
+[READDIR   unique: 364, success, outsize: 112
+unique: 366, opcode: READDIR (28), nodeid: 1, insize: 80, pid: 7697
+   unique: 366, success, outsize: 16
+unique: 368, opcode: RELEASEDIR (29), nodeid: 1, insize: 64, pid: 0
+   unique: 368, success, outsize: 16
+unique: 370, opcode: GETATTR (3), nodeid: 1, insize: 56, pid: 7727
+getattr /
+   unique: 370, success, outsize: 120
+unique: 372, opcode: LOOKUP (1), nodeid: 1, insize: 50, pid: 7727
+LOOKUP /file3.txt
+getattr /file3.txt
+   unique: 372, error: -2 (No such file or directory), outsize: 16
+unique: 374, opcode: LOOKUP (1), nodeid: 1, insize: 53, pid: 7727
+LOOKUP /hostname.txt
+getattr /hostname.txt
+   unique: 374, error: -2 (No such file or directory), outsize: 16
+unique: 376, opcode: LOOKUP (1), nodeid: 1, insize: 50, pid: 7727
+LOOKUP /large.dat
+getattr /large.dat
+   unique: 376, error: -2 (No such file or directory), outsize: 16
+unique: 378, opcode: LOOKUP (1), nodeid: 1, insize: 52, pid: 7727
+LOOKUP /renamed.txt
+getattr /renamed.txt
+   unique: 378, error: -2 (No such file or directory), outsize: 16
+unique: 380, opcode: LOOKUP (1), nodeid: 1, insize: 49, pid: 7727
+LOOKUP /test.txt
+getattr /test.txt
+   NODEID: 2
+   unique: 380, success, outsize: 144
+unique: 382, opcode: LOOKUP (1), nodeid: 1, insize: 50, pid: 7727
+LOOKUP /file3.txt
+getattr /file3.txt
+   unique: 382, error: -2 (No such file or directory), outsize: 16
+unique: 384, opcode: LOOKUP (1), nodeid: 1, insize: 53, pid: 7727
+LOOKUP /hostname.txt
+getattr /hostname.txt
+   unique: 384, error: -2 (No such file or directory), outsize: 16
+unique: 386, opcode: LOOKUP (1), nodeid: 1, insize: 50, pid: 7727
+LOOKUP /large.dat
+getattr /large.dat
+   unique: 386, error: -2 (No such file or directory), outsize: 16
+unique: 388, opcode: LOOKUP (1), nodeid: 1, insize: 52, pid: 7727
+LOOKUP /renamed.txt
+getattr /renamed.txt
+   unique: 388, error: -2 (No such file or directory), outsize: 16
+unique: 390, opcode: OPENDIR (27), nodeid: 1, insize: 48, pid: 7727
+   unique: 390, success, outsize: 32
+unique: 392, opcode: READDIR (28), nodeid: 1, insize: 80, pid: 7727
+readdir[0] from 0
+   unique: 392, success, outsize: 112
+unique: 394, opcode: READDIR (28), nodeid: 1, insize: 80, pid: 7727
+   unique: 394, success, outsize: 16
+unique: 396, opcode: RELEASEDIR (29), nodeid: 1, insize: 64, pid: 0
+   unique: 396, success, outsize: 16
+unique: 398, opcode: GETATTR (3), nodeid: 1, insize: 56, pid: 7758
+getattr /
+   unique: 398, success, outsize: 120
+unique: 400, opcode: LOOKUP (1), nodeid: 1, insize: 50, pid: 7758
+LOOKUP /file3.txt
+getattr /file3.txt
+   unique: 400, error: -2 (No such file or directory), outsize: 16
+unique: 402, opcode: LOOKUP (1), nodeid: 1, insize: 53, pid: 7758
+LOOKUP /hostname.txt
+getattr /hostname.txt
+   unique: 402, error: -2 (No such file or directory), outsize: 16
+unique: 404, opcode: LOOKUP (1), nodeid: 1, insize: 50, pid: 7758
+LOOKUP /large.dat
+getattr /large.dat
+   unique: 404, error: -2 (No such file or directory), outsize: 16
+unique: 406, opcode: LOOKUP (1), nodeid: 1, insize: 52, pid: 7758
+LOOKUP /renamed.txt
+getattr /renamed.txt
+   unique: 406, error: -2 (No such file or directory), outsize: 16
+unique: 408, opcode: LOOKUP (1), nodeid: 1, insize: 49, pid: 7758
+LOOKUP /test.txt
+getattr /test.txt
+   NODEID: 2
+   unique: 408, success, outsize: 144
+unique: 410, opcode: LOOKUP (1), nodeid: 1, insize: 50, pid: 7758
+LOOKUP /file3.txt
+getattr /file3.txt
+   unique: 410, error: -2 (No such file or directory), outsize: 16
+unique: 412, opcode: LOOKUP (1), nodeid: 1, insize: 53, pid: 7758
+LOOKUP /hostname.txt
+getattr /hostname.txt
+   unique: 412, error: -2 (No such file or directory), outsize: 16
+unique: 414, opcode: LOOKUP (1), nodeid: 1, insize: 50, pid: 7758
+LOOKUP /large.dat
+getattr /large.dat
+   unique: 414, error: -2 (No such file or directory), outsize: 16
+unique: 416, opcode: LOOKUP (1), nodeid: 1, insize: 52, pid: 7758
+LOOKUP /renamed.txt
+getattr /renamed.txt
+   unique: 416, error: -2 (No such file or directory), outsize: 16
+unique: 418, opcode: OPENDIR (27), nodeid: 1, insize: 48, pid: 7758
+   unique: 418, success, outsize: 32
+unique: 420, opcode: READDIR (28), nodeid: 1, insize: 80, pid: 7758
+readdir[0] from 0
+   unique: 420, success, outsize: 112
+unique: 422, opcode: READDIR (28), nodeid: 1, insize: 80, pid: 7758
+   unique: 422, success, outsize: 16
+unique: 424, opcode: RELEASEDIR (29), nodeid: 1, insize: 64, pid: 0
+   unique: 424, success, outsize: 16
+unique: 426, opcode: GETATTR (3), nodeid: 1, insize: 56, pid: 7781
+getattr /
+   unique: 426, success, outsize: 120
+unique: 428, opcode: LOOKUP (1), nodeid: 1, insize: 50, pid: 7781
+LOOKUP /file3.txt
+getattr /file3.txt
+   unique: 428, error: -2 (No such file or directory), outsize: 16
+unique: 430, opcode: LOOKUP (1), nodeid: 1, insize: 53, pid: 7781
+LOOKUP /hostname.txt
+getattr /hostname.txt
+   unique: 430, error: -2 (No such file or directory), outsize: 16
+unique: 432, opcode: LOOKUP (1), nodeid: 1, insize: 50, pid: 7781
+LOOKUP /large.dat
+getattr /large.dat
+   unique: 432, error: -2 (No such file or directory), outsize: 16
+unique: 434, opcode: LOOKUP (1), nodeid: 1, insize: 52, pid: 7781
+LOOKUP /renamed.txt
+getattr /renamed.txt
+   unique: 434, error: -2 (No such file or directory), outsize: 16
+unique: 436, opcode: LOOKUP (1), nodeid: 1, insize: 49, pid: 7781
+LOOKUP /test.txt
+getattr /test.txt
+   NODEID: 2
+   unique: 436, success, outsize: 144
+unique: 438, opcode: LOOKUP (1), nodeid: 1, insize: 50, pid: 7781
+LOOKUP /file3.txt
+getattr /file3.txt
+   unique: 438, error: -2 (No such file or directory), outsize: 16
+unique: 440, opcode: LOOKUP (1), nodeid: 1, insize: 53, pid: 7781
+LOOKUP /hostname.txt
+getattr /hostname.txt
+   unique: 440, error: -2 (No such file or directory), outsize: 16
+unique: 442, opcode: LOOKUP (1), nodeid: 1, insize: 50, pid: 7781
+LOOKUP /large.dat
+getattr /large.dat
+   unique: 442, error: -2 (No such file or directory), outsize: 16
+unique: 444, opcode: LOOKUP (1), nodeid: 1, insize: 52, pid: 7781
+LOOKUP /renamed.txt
+getattr /renamed.txt
+   unique: 444, error: -2 (No such file or directory), outsize: 16
+unique: 446, opcode: OPENDIR (27), nodeid: 1, insize: 48, pid: 7781
+   unique: 446, success, outsize: 32
+unique: 448, opcode: READDIR (28), nodeid: 1, insize: 80, pid: 7781
+readdir[0] from 0
+   unique: 448, success, outsize: 112
+unique: 450, opcode: READDIR (28), nodeid: 1, insize: 80, pid: 7781
+   unique: 450, success, outsize: 16
+unique: 452, opcode: RELEASEDIR (29), nodeid: 1, insize: 64, pid: 0
+   unique: 452, success, outsize: 16
+unique: 454, opcode: GETATTR (3), nodeid: 1, insize: 56, pid: 7804
+getattr /
+   unique: 454, success, outsize: 120
+unique: 456, opcode: LOOKUP (1), nodeid: 1, insize: 50, pid: 7804
+LOOKUP /file3.txt
+getattr /file3.txt
+   unique: 456, error: -2 (No such file or directory), outsize: 16
+unique: 458, opcode: LOOKUP (1), nodeid: 1, insize: 53, pid: 7804
+LOOKUP /hostname.txt
+getattr /hostname.txt
+   unique: 458, error: -2 (No such file or directory), outsize: 16
+unique: 460, opcode: LOOKUP (1), nodeid: 1, insize: 50, pid: 7804
+LOOKUP /large.dat
+getattr /large.dat
+   unique: 460, error: -2 (No such file or directory), outsize: 16
+unique: 462, opcode: LOOKUP (1), nodeid: 1, insize: 52, pid: 7804
+LOOKUP /renamed.txt
+getattr /renamed.txt
+   unique: 462, error: -2 (No such file or directory), outsize: 16
+unique: 464, opcode: LOOKUP (1), nodeid: 1, insize: 49, pid: 7804
+LOOKUP /test.txt
+getattr /test.txt
+   NODEID: 2
+   unique: 464, success, outsize: 144
+unique: 466, opcode: LOOKUP (1), nodeid: 1, insize: 50, pid: 7804
+LOOKUP /file3.txt
+getattr /file3.txt
+   unique: 466, error: -2 (No such file or directory), outsize: 16
+unique: 468, opcode: LOOKUP (1), nodeid: 1, insize: 53, pid: 7804
+LOOKUP /hostname.txt
+getattr /hostname.txt
+   unique: 468, error: -2 (No such file or directory), outsize: 16
+unique: 470, opcode: LOOKUP (1), nodeid: 1, insize: 50, pid: 7804
+LOOKUP /large.dat
+getattr /large.dat
+   unique: 470, error: -2 (No such file or directory), outsize: 16
+unique: 472, opcode: LOOKUP (1), nodeid: 1, insize: 52, pid: 7804
+LOOKUP /renamed.txt
+getattr /renamed.txt
+   unique: 472, error: -2 (No such file or directory), outsize: 16
+unique: 474, opcode: OPENDIR (27), nodeid: 1, insize: 48, pid: 7804
+   unique: 474, success, outsize: 32
+unique: 476, opcode: READDIR (28), nodeid: 1, insize: 80, pid: 7804
+readdir[0] from 0
+   unique: 476, success, outsize: 112
+unique: 478, opcode: READDIR (28), nodeid: 1, insize: 80, pid: 7804
+   unique: 478, success, outsize: 16
+unique: 480, opcode: RELEASEDIR (29), nodeid: 1, insize: 64, pid: 0
+   unique: 480, success, outsize: 16
+unique: 482, opcode: GETATTR (3), nodeid: 1, insize: 56, pid: 7827
+getattr /
+   unique: 482, success, outsize: 120
+unique: 484, opcode: LOOKUP (1), nodeid: 1, insize: 50, pid: 7827
+LOOKUP /file3.txt
+getattr /file3.txt
+   unique: 484, error: -2 (No such file or directory), outsize: 16
+unique: 486, opcode: LOOKUP (1), nodeid: 1, insize: 53, pid: 7827
+LOOKUP /hostname.txt
+getattr /hostname.txt
+   unique: 486, error: -2 (No such file or directory), outsize: 16
+unique: 488, opcode: LOOKUP (1), nodeid: 1, insize: 50, pid: 7827
+LOOKUP /large.dat
+getattr /large.dat
+   unique: 488, error: -2 (No such file or directory), outsize: 16
+unique: 490, opcode: LOOKUP (1), nodeid: 1, insize: 52, pid: 7827
+LOOKUP /renamed.txt
+getattr /renamed.txt
+   unique: 490, error: -2 (No such file or directory), outsize: 16
+unique: 492, opcode: LOOKUP (1), nodeid: 1, insize: 49, pid: 7827
+LOOKUP /test.txt
+getattr /test.txt
+   NODEID: 2
+   unique: 492, success, outsize: 144
+unique: 494, opcode: LOOKUP (1), nodeid: 1, insize: 50, pid: 7827
+LOOKUP /file3.txt
+getattr /file3.txt
+   unique: 494, error: -2 (No such file or directory), outsize: 16
+unique: 496, opcode: LOOKUP (1), nodeid: 1, insize: 53, pid: 7827
+LOOKUP /hostname.txt
+getattr /hostname.txt
+] Success for: /
+[GETATTR] Called for path: /
+[GETATTR] Success for: / (type: DIR, size: 4096)
+[GETATTR] Called for path: /file3.txt
+[GETATTR] Path not found: /file3.txt
+[GETATTR] Called for path: /hostname.txt
+[GETATTR] Path not found: /hostname.txt
+[GETATTR] Called for path: /large.dat
+[GETATTR] Path not found: /large.dat
+[GETATTR] Called for path: /renamed.txt
+[GETATTR] Path not found: /renamed.txt
+[GETATTR] Called for path: /test.txt
+[GETATTR] Success for: /test.txt (type: FILE, size: 5)
+[GETATTR] Called for path: /file3.txt
+[GETATTR] Path not found: /file3.txt
+[GETATTR] Called for path: /hostname.txt
+[GETATTR] Path not found: /hostname.txt
+[GETATTR] Called for path: /large.dat
+[GETATTR] Path not found: /large.dat
+[GETATTR] Called for path: /renamed.txt
+[GETATTR] Path not found: /renamed.txt
+[READDIR] Called for path: /
+[READDIR] Adding entry: test.txt
+[READDIR] Success for: /
+[GETATTR] Called for path: /
+[GETATTR] Success for: / (type: DIR, size: 4096)
+[GETATTR] Called for path: /file3.txt
+[GETATTR] Path not found: /file3.txt
+[GETATTR] Called for path: /hostname.txt
+[GETATTR] Path not found: /hostname.txt
+[GETATTR] Called for path: /large.dat
+[GETATTR] Path not found: /large.dat
+[GETATTR] Called for path: /renamed.txt
+[GETATTR] Path not found: /renamed.txt
+[GETATTR] Called for path: /test.txt
+[GETATTR] Success for: /test.txt (type: FILE, size: 5)
+[GETATTR] Called for path: /file3.txt
+[GETATTR] Path not found: /file3.txt
+[GETATTR] Called for path: /hostname.txt
+[GETATTR] Path not found: /hostname.txt
+[GETATTR] Called for path: /large.dat
+[GETATTR] Path not found: /large.dat
+[GETATTR] Called for path: /renamed.txt
+[GETATTR] Path not found: /renamed.txt
+[READDIR] Called for path: /
+[READDIR] Adding entry: test.txt
+[READDIR] Success for: /
+[GETATTR] Called for path: /
+[GETATTR] Success for: / (type: DIR, size: 4096)
+[GETATTR] Called for path: /file3.txt
+[GETATTR] Path not found: /file3.txt
+[GETATTR] Called for path: /hostname.txt
+[GETATTR] Path not found: /hostname.txt
+[GETATTR] Called for path: /large.dat
+[GETATTR] Path not found: /large.dat
+[GETATTR] Called for path: /renamed.txt
+[GETATTR] Path not found: /renamed.txt
+[GETATTR] Called for path: /test.txt
+[GETATTR] Success for: /test.txt (type: FILE, size: 5)
+[GETATTR] Called for path: /file3.txt
+[GETATTR] Path not found: /file3.txt
+[GETATTR] Called for path: /hostname.txt
+[GETATTR] Path not found: /hostname.txt
+[GETATTR] Called for path: /large.dat
+[GETATTR] Path not found: /large.dat
+[GETATTR] Called for path: /renamed.txt
+[GETATTR] Path not found: /renamed.txt
+[READDIR] Called for path: /
+[READDIR] Adding entry: test.txt
+[READDIR] Success for: /
+[GETATTR] Called for path: /
+[GETATTR] Success for: / (type: DIR, size: 4096)
+[GETATTR] Called for path: /file3.txt
+[GETATTR] Path not found: /file3.txt
+[GETATTR] Called for path: /hostname.txt
+[GETATTR] Path not found: /hostname.txt
+[GETATTR] Called for path: /large.dat
+[GETATTR] Path not found: /large.dat
+[GETATTR] Called for path: /renamed.txt
+[GETATTR] Path not found: /renamed.txt
+[GETATTR] Called for path: /test.txt
+[GETATTR] Success for: /test.txt (type: FILE, size: 5)
+[GETATTR] Called for path: /file3.txt
+[GETATTR] Path not found: /file3.txt
+[GETATTR] Called for path: /hostname.txt
+[GETATTR] Path not found: /hostname.txt
+[GETATTR] Called for path: /large.dat
+[GETATTR] Path not found: /large.dat
+[GETATTR] Called for path: /renamed.txt
+[GETATTR] Path not found: /renamed.txt
+[READDIR] Called for path: /
+[READDIR] Adding entry: test.txt
+[READDIR] Success for: /
+[GETATTR] Called for path: /
+[GETATTR] Success for: / (type: DIR, size: 4096)
+[GETATTR] Called for path: /file3.txt
+[GETATTR] Path not found: /file3.txt
+[GETATTR] Called for path: /hostname.txt
+[GETATTR] Path not found: /hostname.txt
+[GETATTR] Called for path: /large.dat
+[GETATTR] Path not found: /large.dat
+[GETATTR] Called for path: /renamed.txt
+[GETATTR] Path not found: /renamed.txt
+[GETATTR] Called for path: /test.txt
+[GETATTR] Success for: /test.txt (type: FILE, size: 5)
+[GETATTR] Called for path: /file3.txt
+[GETATTR] Path not found: /file3.txt
+[GETATTR] Called   unique: 496, error: -2 (No such file or directory), outsize: 16
+unique: 498, opcode: LOOKUP (1), nodeid: 1, insize: 50, pid: 7827
+LOOKUP /large.dat
+getattr /large.dat
+   unique: 498, error: -2 (No such file or directory), outsize: 16
+unique: 500, opcode: LOOKUP (1), nodeid: 1, insize: 52, pid: 7827
+LOOKUP /renamed.txt
+getattr /renamed.txt
+   unique: 500, error: -2 (No such file or directory), outsize: 16
+unique: 502, opcode: OPENDIR (27), nodeid: 1, insize: 48, pid: 7827
+   unique: 502, success, outsize: 32
+unique: 504, opcode: READDIR (28), nodeid: 1, insize: 80, pid: 7827
+readdir[0] from 0
+   unique: 504, success, outsize: 112
+unique: 506, opcode: READDIR (28), nodeid: 1, insize: 80, pid: 7827
+   unique: 506, success, outsize: 16
+unique: 508, opcode: RELEASEDIR (29), nodeid: 1, insize: 64, pid: 0
+   unique: 508, success, outsize: 16
+unique: 510, opcode: GETATTR (3), nodeid: 1, insize: 56, pid: 7850
+getattr /
+   unique: 510, success, outsize: 120
+unique: 512, opcode: LOOKUP (1), nodeid: 1, insize: 50, pid: 7850
+LOOKUP /file3.txt
+getattr /file3.txt
+   unique: 512, error: -2 (No such file or directory), outsize: 16
+unique: 514, opcode: LOOKUP (1), nodeid: 1, insize: 53, pid: 7850
+LOOKUP /hostname.txt
+getattr /hostname.txt
+   unique: 514, error: -2 (No such file or directory), outsize: 16
+unique: 516, opcode: LOOKUP (1), nodeid: 1, insize: 50, pid: 7850
+LOOKUP /large.dat
+getattr /large.dat
+   unique: 516, error: -2 (No such file or directory), outsize: 16
+unique: 518, opcode: LOOKUP (1), nodeid: 1, insize: 52, pid: 7850
+LOOKUP /renamed.txt
+getattr /renamed.txt
+   unique: 518, error: -2 (No such file or directory), outsize: 16
+unique: 520, opcode: LOOKUP (1), nodeid: 1, insize: 49, pid: 7850
+LOOKUP /test.txt
+getattr /test.txt
+   NODEID: 2
+   unique: 520, success, outsize: 144
+unique: 522, opcode: LOOKUP (1), nodeid: 1, insize: 50, pid: 7850
+LOOKUP /file3.txt
+getattr /file3.txt
+   unique: 522, error: -2 (No such file or directory), outsize: 16
+unique: 524, opcode: LOOKUP (1), nodeid: 1, insize: 53, pid: 7850
+LOOKUP /hostname.txt
+getattr /hostname.txt
+   unique: 524, error: -2 (No such file or directory), outsize: 16
+unique: 526, opcode: LOOKUP (1), nodeid: 1, insize: 50, pid: 7850
+LOOKUP /large.dat
+getattr /large.dat
+   unique: 526, error: -2 (No such file or directory), outsize: 16
+unique: 528, opcode: LOOKUP (1), nodeid: 1, insize: 52, pid: 7850
+LOOKUP /renamed.txt
+getattr /renamed.txt
+   unique: 528, error: -2 (No such file or directory), outsize: 16
+unique: 530, opcode: OPENDIR (27), nodeid: 1, insize: 48, pid: 7850
+   unique: 530, success, outsize: 32
+unique: 532, opcode: READDIR (28), nodeid: 1, insize: 80, pid: 7850
+readdir[0] from 0
+   unique: 532, success, outsize: 112
+unique: 534, opcode: READDIR (28), nodeid: 1, insize: 80, pid: 7850
+   unique: 534, success, outsize: 16
+unique: 536, opcode: RELEASEDIR (29), nodeid: 1, insize: 64, pid: 0
+   unique: 536, success, outsize: 16
+unique: 538, opcode: GETATTR (3), nodeid: 1, insize: 56, pid: 7877
+getattr /
+   unique: 538, success, outsize: 120
+unique: 540, opcode: LOOKUP (1), nodeid: 1, insize: 50, pid: 7877
+LOOKUP /file3.txt
+getattr /file3.txt
+   unique: 540, error: -2 (No such file or directory), outsize: 16
+unique: 542, opcode: LOOKUP (1), nodeid: 1, insize: 53, pid: 7877
+LOOKUP /hostname.txt
+getattr /hostname.txt
+   unique: 542, error: -2 (No such file or directory), outsize: 16
+unique: 544, opcode: LOOKUP (1), nodeid: 1, insize: 50, pid: 7877
+LOOKUP /large.dat
+getattr /large.dat
+   unique: 544, error: -2 (No such file or directory), outsize: 16
+unique: 546, opcode: LOOKUP (1), nodeid: 1, insize: 52, pid: 7877
+LOOKUP /renamed.txt
+getattr /renamed.txt
+   unique: 546, error: -2 (No such file or directory), outsize: 16
+unique: 548, opcode: LOOKUP (1), nodeid: 1, insize: 49, pid: 7877
+LOOKUP /test.txt
+getattr /test.txt
+   NODEID: 2
+   unique: 548, success, outsize: 144
+unique: 550, opcode: LOOKUP (1), nodeid: 1, insize: 50, pid: 7877
+LOOKUP /file3.txt
+getattr /file3.txt
+   unique: 550, error: -2 (No such file or directory), outsize: 16
+unique: 552, opcode: LOOKUP (1), nodeid: 1, insize: 53, pid: 7877
+LOOKUP /hostname.txt
+getattr /hostname.txt
+   unique: 552, error: -2 (No such file or directory), outsize: 16
+unique: 554, opcode: LOOKUP (1), nodeid: 1, insize: 50, pid: 7877
+LOOKUP /large.dat
+getattr /large.dat
+   unique: 554, error: -2 (No such file or directory), outsize: 16
+unique: 556, opcode: LOOKUP (1), nodeid: 1, insize: 52, pid: 7877
+LOOKUP /renamed.txt
+getattr /renamed.txt
+   unique: 556, error: -2 (No such file or directory), outsize: 16
+unique: 558, opcode: OPENDIR (27), nodeid: 1, insize: 48, pid: 7877
+   unique: 558, success, outsize: 32
+unique: 560, opcode: READDIR (28), nodeid: 1, insize: 80, pid: 7877
+readdir[0] from 0
+   unique: 560, success, outsize: 112
+unique: 562, opcode: READDIR (28), nodeid: 1, insize: 80, pid: 7877
+   unique: 562, success, outsize: 16
+unique: 564, opcode: RELEASEDIR (29), nodeid: 1, insize: 64, pid: 0
+   unique: 564, success, outsize: 16
+unique: 566, opcode: GETATTR (3), nodeid: 1, insize: 56, pid: 7905
+getattr /
+   unique: 566, success, outsize: 120
+unique: 568, opcode: LOOKUP (1), nodeid: 1, insize: 50, pid: 7905
+LOOKUP /file3.txt
+getattr /file3.txt
+   unique: 568, error: -2 (No such file or directory), outsize: 16
+unique: 570, opcode: LOOKUP (1), nodeid: 1, insize: 53, pid: 7905
+LOOKUP /hostname.txt
+getattr /hostname.txt
+   unique: 570, error: -2 (No such file or directory), outsize: 16
+unique: 572, opcode: LOOKUP (1), nodeid: 1, insize: 50, pid: 7905
+LOOKUP /large.dat
+getattr /large.dat
+   unique: 572, error: -2 (No such file or directory), outsize: 16
+unique: 574, opcode: LOOKUP (1), nodeid: 1, insize: 52, pid: 7905
+LOOKUP /renamed.txt
+getattr /renamed.txt
+   unique: 574, error: -2 (No such file or directory), outsize: 16
+unique: 576, opcode: LOOKUP (1), nodeid: 1, insize: 49, pid: 7905
+LOOKUP /test.txt
+getattr /test.txt
+   NODEID: 2
+   unique: 576, success, outsize: 144
+unique: 578, opcode: LOOKUP (1), nodeid: 1, insize: 50, pid: 7905
+LOOKUP /file3.txt
+getattr /file3.txt
+   unique: 578, error: -2 (No such file or directory), outsize: 16
+unique: 580, opcode: LOOKUP (1), nodeid: 1, insize: 53, pid: 7905
+LOOKUP /hostname.txt
+getattr /hostname.txt
+   unique: 580, error: -2 (No such file or directory), outsize: 16
+unique: 582, opcode: LOOKUP (1), nodeid: 1, insize: 50, pid: 7905
+LOOKUP /large.dat
+getattr /large.dat
+   unique: 582, error: -2 (No such file or directory), outsize: 16
+unique: 584, opcode: LOOKUP (1), nodeid: 1, insize: 52, pid: 7905
+LOOKUP /renamed.txt
+getattr /renamed.txt
+   unique: 584, error: -2 (No such file or directory), outsize: 16
+unique: 586, opcode: OPENDIR (27), nodeid: 1, insize: 48, pid: 7905
+   unique: 586, success, outsize: 32
+unique: 588, opcode: READDIR (28), nodeid: 1, insize: 80, pid: 7905
+readdir[0] from 0
+   unique: 588, success, outsize: 112
+unique: 590, opcode: READDIR (28), nodeid: 1, insize: 80, pid: 7905
+   unique: 590, success, outsize: 16
+unique: 592, opcode: RELEASEDIR (29), nodeid: 1, insize: 64, pid: 0
+   unique: 592, success, outsize: 16
+unique: 594, opcode: GETATTR (3), nodeid: 1, insize: 56, pid: 7928
+getattr /
+   unique: 594, success, outsize: 120
+unique: 596, opcode: LOOKUP (1), nodeid: 1, insize: 50, pid: 7928
+LOOKUP /file3.txt
+getattr /file3.txt
+   unique: 596, error: -2 (No such file or directory), outsize: 16
+unique: 598, opcode: LOOKUP (1), nodeid: 1, insize: 53, pid: 7928
+LOOKUP /hostname.txt
+getattr /hostname.txt
+   unique: 598, error: -2 (No such file or directory), outsize: 16
+unique: 600, opcode: LOOKUP (1), nodeid: 1, insize: 50, pid: 7928
+LOOKUP /large.dat
+getattr /large.dat
+   unique: 600, error: -2 (No such file or directory), outsize: 16
+unique: 602, opcode: LOOKUP (1), nodeid: 1, insize: 52, pid: 7928
+LOOKUP /renamed.txt
+getattr /renamed.txt
+   unique: 602, error: -2 (No such file or directory), outsize: 16
+unique: 604, opcode: LOOKUP (1), nodeid: 1, insize: 49, pid: 7928
+LOOKUP /test.txt
+getattr /test.txt
+   NODEID: 2
+   unique: 604, success, outsize: 144
+unique: 606, opcode: LOOKUP (1), nodeid: 1, insize: 50, pid: 7928
+LOOKUP /file3.txt
+getattr /file3.txt
+   unique: 606, error: -2 (No such file or directory), outsize: 16
+unique: 608, opcode: LOOKUP (1), nodeid: 1, insize: 53, pid: 7928
+LOOKUP /hostname.txt
+getattr /hostname.txt
+   unique: 608, error: -2 (No such file or directory), outsize: 16
+unique: 610, opcode: LOOKUP (1), nodeid: 1, insize: 50, pid: 7928
+LOOKUP /large.dat
+getattr /large.dat
+   unique: 610, error: -2 (No such file or directory), outsize: 16
+unique: 612, opcode: LOOKUP (1), nodeid: 1, insize: 52, pid: 7928
+LOOKUP /renamed.txt
+getattr /renamed.txt
+   unique: 612, error: -2 (No such file or directory), outsize: 16
+unique: 614, opcode: OPENDIR (27), nodeid: 1, insize: 48, pid: 7928
+   unique: 614, success, outsize: 32
+unique: 616, opcode: READDIR (28), nodeid: 1, insize: 80, pid: 7928
+readdir[0] from 0
+   unique: 616, success, outsize: 112
+unique: 618, opcode: READDIR (28), nodeid: 1, insize: 80, pid: 7928
+   unique: 618, success, outsize: 16
+unique: 620, opcode: RELEASEDIR (29), nodeid: 1, insize: 64, pid: 0
+   unique: 620, success, outsize: 16
+unique: 622, opcode: GETATTR (3), nodeid: 1, insize: 56, pid: 7955
+getattr /
+   unique: 622, success, outsize: 120
+unique: 624, opcode: LOOKUP (1), nodeid: 1, insize: 50, pid: 7955
+LOOKUP /file3.txt
+getattr /file3.txt
+   unique: 624, error: -2 (No such file or directory), outsize: 16
+unique: 626, opcode: LOOKUP (1), nodeid: 1, insize: 53, pid: 7955
+LOOKUP /hostname.txt
+getattr /hostname.txt
+   unique: 626, error: -2 (No such file or directory), outsize: 16
+unique: 628, opcode: LOOKUP (1), nodeid: 1, insize: 50, pid: 7955
+LOOKUP /large.dat
+getattr /large.dat
+ for path: /hostname.txt
+[GETATTR] Path not found: /hostname.txt
+[GETATTR] Called for path: /large.dat
+[GETATTR] Path not found: /large.dat
+[GETATTR] Called for path: /renamed.txt
+[GETATTR] Path not found: /renamed.txt
+[READDIR] Called for path: /
+[READDIR] Adding entry: test.txt
+[READDIR] Success for: /
+[GETATTR] Called for path: /
+[GETATTR] Success for: / (type: DIR, size: 4096)
+[GETATTR] Called for path: /file3.txt
+[GETATTR] Path not found: /file3.txt
+[GETATTR] Called for path: /hostname.txt
+[GETATTR] Path not found: /hostname.txt
+[GETATTR] Called for path: /large.dat
+[GETATTR] Path not found: /large.dat
+[GETATTR] Called for path: /renamed.txt
+[GETATTR] Path not found: /renamed.txt
+[GETATTR] Called for path: /test.txt
+[GETATTR] Success for: /test.txt (type: FILE, size: 5)
+[GETATTR] Called for path: /file3.txt
+[GETATTR] Path not found: /file3.txt
+[GETATTR] Called for path: /hostname.txt
+[GETATTR] Path not found: /hostname.txt
+[GETATTR] Called for path: /large.dat
+[GETATTR] Path not found: /large.dat
+[GETATTR] Called for path: /renamed.txt
+[GETATTR] Path not found: /renamed.txt
+[READDIR] Called for path: /
+[READDIR] Adding entry: test.txt
+[READDIR] Success for: /
+[GETATTR] Called for path: /
+[GETATTR] Success for: / (type: DIR, size: 4096)
+[GETATTR] Called for path: /file3.txt
+[GETATTR] Path not found: /file3.txt
+[GETATTR] Called for path: /hostname.txt
+[GETATTR] Path not found: /hostname.txt
+[GETATTR] Called for path: /large.dat
+[GETATTR] Path not found: /large.dat
+[GETATTR] Called for path: /renamed.txt
+[GETATTR] Path not found: /renamed.txt
+[GETATTR] Called for path: /test.txt
+[GETATTR] Success for: /test.txt (type: FILE, size: 5)
+[GETATTR] Called for path: /file3.txt
+[GETATTR] Path not found: /file3.txt
+[GETATTR] Called for path: /hostname.txt
+[GETATTR] Path not found: /hostname.txt
+[GETATTR] Called for path: /large.dat
+[GETATTR] Path not found: /large.dat
+[GETATTR] Called for path: /renamed.txt
+[GETATTR] Path not found: /renamed.txt
+[READDIR] Called for path: /
+[READDIR] Adding entry: test.txt
+[READDIR] Success for: /
+[GETATTR] Called for path: /
+[GETATTR] Success for: / (type: DIR, size: 4096)
+[GETATTR] Called for path: /file3.txt
+[GETATTR] Path not found: /file3.txt
+[GETATTR] Called for path: /hostname.txt
+[GETATTR] Path not found: /hostname.txt
+[GETATTR] Called for path: /large.dat
+[GETATTR] Path not found: /large.dat
+[GETATTR] Called for path: /renamed.txt
+[GETATTR] Path not found: /renamed.txt
+[GETATTR] Called for path: /test.txt
+[GETATTR] Success for: /test.txt (type: FILE, size: 5)
+[GETATTR] Called for path: /file3.txt
+[GETATTR] Path not found: /file3.txt
+[GETATTR] Called for path: /hostname.txt
+[GETATTR] Path not found: /hostname.txt
+[GETATTR] Called for path: /large.dat
+[GETATTR] Path not found: /large.dat
+[GETATTR] Called for path: /renamed.txt
+[GETATTR] Path not found: /renamed.txt
+[READDIR] Called for path: /
+[READDIR] Adding entry: test.txt
+[READDIR] Success for: /
+[GETATTR] Called for path: /
+[GETATTR] Success for: / (type: DIR, size: 4096)
+[GETATTR] Called for path: /file3.txt
+[GETATTR] Path not found: /file3.txt
+[GETATTR] Called for path: /hostname.txt
+[GETATTR] Path not found: /hostname.txt
+[GETATTR] Called for path: /large.dat
+[GETATTR] Path not found: /large.dat
+[GETATTR] Called for path: /renamed.txt
+[GETATTR] Path not found: /renamed.txt
+[GETATTR] Called for path: /test.txt
+[GETATTR] Success for: /test.txt (type: FILE, size: 5)
+[GETATTR] Called for path: /file3.txt
+[GETATTR] Path not found: /file3.txt
+[GETATTR] Called for path: /hostname.txt
+[GETATTR] Path not found: /hostname.txt
+[GETATTR] Called for path: /large.dat
+[GETATTR] Path not found: /large.dat
+[GETATTR] Called for path: /renamed.txt
+[GETATTR] Path not found: /renamed.txt
+[READDIR] Called for path: /
+[READDIR] Adding entry: test.txt
+[READDIR] Success for: /
+[GETATTR] Called for path: /
+[GETATTR] Success for: / (type: DIR, size: 4096)
+[GETATTR] Called for path: /file3.txt
+[GETATTR] Path not found: /file3.txt
+[GETATTR] Called for path: /hostname.txt
+[GETATTR] Path not found: /hostname.txt
+[GETATTR] Called for path: /large.dat
+[GETATTR]    unique: 628, error: -2 (No such file or directory), outsize: 16
+unique: 630, opcode: LOOKUP (1), nodeid: 1, insize: 52, pid: 7955
+LOOKUP /renamed.txt
+getattr /renamed.txt
+   unique: 630, error: -2 (No such file or directory), outsize: 16
+unique: 632, opcode: LOOKUP (1), nodeid: 1, insize: 49, pid: 7955
+LOOKUP /test.txt
+getattr /test.txt
+   NODEID: 2
+   unique: 632, success, outsize: 144
+unique: 634, opcode: LOOKUP (1), nodeid: 1, insize: 50, pid: 7955
+LOOKUP /file3.txt
+getattr /file3.txt
+   unique: 634, error: -2 (No such file or directory), outsize: 16
+unique: 636, opcode: LOOKUP (1), nodeid: 1, insize: 53, pid: 7955
+LOOKUP /hostname.txt
+getattr /hostname.txt
+   unique: 636, error: -2 (No such file or directory), outsize: 16
+unique: 638, opcode: LOOKUP (1), nodeid: 1, insize: 50, pid: 7955
+LOOKUP /large.dat
+getattr /large.dat
+   unique: 638, error: -2 (No such file or directory), outsize: 16
+unique: 640, opcode: LOOKUP (1), nodeid: 1, insize: 52, pid: 7955
+LOOKUP /renamed.txt
+getattr /renamed.txt
+   unique: 640, error: -2 (No such file or directory), outsize: 16
+unique: 642, opcode: OPENDIR (27), nodeid: 1, insize: 48, pid: 7955
+   unique: 642, success, outsize: 32
+unique: 644, opcode: READDIR (28), nodeid: 1, insize: 80, pid: 7955
+readdir[0] from 0
+   unique: 644, success, outsize: 112
+unique: 646, opcode: READDIR (28), nodeid: 1, insize: 80, pid: 7955
+   unique: 646, success, outsize: 16
+unique: 648, opcode: RELEASEDIR (29), nodeid: 1, insize: 64, pid: 0
+   unique: 648, success, outsize: 16
+unique: 650, opcode: GETATTR (3), nodeid: 1, insize: 56, pid: 7978
+getattr /
+   unique: 650, success, outsize: 120
+unique: 652, opcode: LOOKUP (1), nodeid: 1, insize: 50, pid: 7978
+LOOKUP /file3.txt
+getattr /file3.txt
+   unique: 652, error: -2 (No such file or directory), outsize: 16
+unique: 654, opcode: LOOKUP (1), nodeid: 1, insize: 53, pid: 7978
+LOOKUP /hostname.txt
+getattr /hostname.txt
+   unique: 654, error: -2 (No such file or directory), outsize: 16
+unique: 656, opcode: LOOKUP (1), nodeid: 1, insize: 50, pid: 7978
+LOOKUP /large.dat
+getattr /large.dat
+   unique: 656, error: -2 (No such file or directory), outsize: 16
+unique: 658, opcode: LOOKUP (1), nodeid: 1, insize: 52, pid: 7978
+LOOKUP /renamed.txt
+getattr /renamed.txt
+   unique: 658, error: -2 (No such file or directory), outsize: 16
+unique: 660, opcode: LOOKUP (1), nodeid: 1, insize: 49, pid: 7978
+LOOKUP /test.txt
+getattr /test.txt
+   NODEID: 2
+   unique: 660, success, outsize: 144
+unique: 662, opcode: LOOKUP (1), nodeid: 1, insize: 50, pid: 7978
+LOOKUP /file3.txt
+getattr /file3.txt
+   unique: 662, error: -2 (No such file or directory), outsize: 16
+unique: 664, opcode: LOOKUP (1), nodeid: 1, insize: 53, pid: 7978
+LOOKUP /hostname.txt
+getattr /hostname.txt
+   unique: 664, error: -2 (No such file or directory), outsize: 16
+unique: 666, opcode: LOOKUP (1), nodeid: 1, insize: 50, pid: 7978
+LOOKUP /large.dat
+getattr /large.dat
+   unique: 666, error: -2 (No such file or directory), outsize: 16
+unique: 668, opcode: LOOKUP (1), nodeid: 1, insize: 52, pid: 7978
+LOOKUP /renamed.txt
+getattr /renamed.txt
+   unique: 668, error: -2 (No such file or directory), outsize: 16
+unique: 670, opcode: OPENDIR (27), nodeid: 1, insize: 48, pid: 7978
+   unique: 670, success, outsize: 32
+unique: 672, opcode: READDIR (28), nodeid: 1, insize: 80, pid: 7978
+readdir[0] from 0
+   unique: 672, success, outsize: 112
+unique: 674, opcode: READDIR (28), nodeid: 1, insize: 80, pid: 7978
+   unique: 674, success, outsize: 16
+unique: 676, opcode: RELEASEDIR (29), nodeid: 1, insize: 64, pid: 0
+   unique: 676, success, outsize: 16
+unique: 678, opcode: GETATTR (3), nodeid: 1, insize: 56, pid: 8002
+getattr /
+   unique: 678, success, outsize: 120
+unique: 680, opcode: LOOKUP (1), nodeid: 1, insize: 50, pid: 8002
+LOOKUP /file3.txt
+getattr /file3.txt
+   unique: 680, error: -2 (No such file or directory), outsize: 16
+unique: 682, opcode: LOOKUP (1), nodeid: 1, insize: 53, pid: 8002
+LOOKUP /hostname.txt
+getattr /hostname.txt
+   unique: 682, error: -2 (No such file or directory), outsize: 16
+unique: 684, opcode: LOOKUP (1), nodeid: 1, insize: 50, pid: 8002
+LOOKUP /large.dat
+getattr /large.dat
+   unique: 684, error: -2 (No such file or directory), outsize: 16
+unique: 686, opcode: LOOKUP (1), nodeid: 1, insize: 52, pid: 8002
+LOOKUP /renamed.txt
+getattr /renamed.txt
+   unique: 686, error: -2 (No such file or directory), outsize: 16
+unique: 688, opcode: LOOKUP (1), nodeid: 1, insize: 49, pid: 8002
+LOOKUP /test.txt
+getattr /test.txt
+   NODEID: 2
+   unique: 688, success, outsize: 144
+unique: 690, opcode: LOOKUP (1), nodeid: 1, insize: 50, pid: 8002
+LOOKUP /file3.txt
+getattr /file3.txt
+   unique: 690, error: -2 (No such file or directory), outsize: 16
+unique: 692, opcode: LOOKUP (1), nodeid: 1, insize: 53, pid: 8002
+LOOKUP /hostname.txt
+getattr /hostname.txt
+   unique: 692, error: -2 (No such file or directory), outsize: 16
+unique: 694, opcode: LOOKUP (1), nodeid: 1, insize: 50, pid: 8002
+LOOKUP /large.dat
+getattr /large.dat
+   unique: 694, error: -2 (No such file or directory), outsize: 16
+unique: 696, opcode: LOOKUP (1), nodeid: 1, insize: 52, pid: 8002
+LOOKUP /renamed.txt
+getattr /renamed.txt
+   unique: 696, error: -2 (No such file or directory), outsize: 16
+unique: 698, opcode: OPENDIR (27), nodeid: 1, insize: 48, pid: 8002
+   unique: 698, success, outsize: 32
+unique: 700, opcode: READDIR (28), nodeid: 1, insize: 80, pid: 8002
+readdir[0] from 0
+   unique: 700, success, outsize: 112
+unique: 702, opcode: READDIR (28), nodeid: 1, insize: 80, pid: 8002
+   unique: 702, success, outsize: 16
+unique: 704, opcode: RELEASEDIR (29), nodeid: 1, insize: 64, pid: 0
+   unique: 704, success, outsize: 16
+unique: 706, opcode: GETATTR (3), nodeid: 1, insize: 56, pid: 8014
+getattr /
+   unique: 706, success, outsize: 120
+unique: 708, opcode: LOOKUP (1), nodeid: 1, insize: 50, pid: 8014
+LOOKUP /file3.txt
+getattr /file3.txt
+   unique: 708, error: -2 (No such file or directory), outsize: 16
+unique: 710, opcode: LOOKUP (1), nodeid: 1, insize: 53, pid: 8014
+LOOKUP /hostname.txt
+getattr /hostname.txt
+   unique: 710, error: -2 (No such file or directory), outsize: 16
+unique: 712, opcode: LOOKUP (1), nodeid: 1, insize: 50, pid: 8014
+LOOKUP /large.dat
+getattr /large.dat
+   unique: 712, error: -2 (No such file or directory), outsize: 16
+unique: 714, opcode: LOOKUP (1), nodeid: 1, insize: 52, pid: 8014
+LOOKUP /renamed.txt
+getattr /renamed.txt
+   unique: 714, error: -2 (No such file or directory), outsize: 16
+unique: 716, opcode: LOOKUP (1), nodeid: 1, insize: 49, pid: 8014
+LOOKUP /test.txt
+getattr /test.txt
+   NODEID: 2
+   unique: 716, success, outsize: 144
+unique: 718, opcode: LOOKUP (1), nodeid: 1, insize: 50, pid: 8014
+LOOKUP /file3.txt
+getattr /file3.txt
+   unique: 718, error: -2 (No such file or directory), outsize: 16
+unique: 720, opcode: LOOKUP (1), nodeid: 1, insize: 53, pid: 8014
+LOOKUP /hostname.txt
+getattr /hostname.txt
+   unique: 720, error: -2 (No such file or directory), outsize: 16
+unique: 722, opcode: LOOKUP (1), nodeid: 1, insize: 50, pid: 8014
+LOOKUP /large.dat
+getattr /large.dat
+   unique: 722, error: -2 (No such file or directory), outsize: 16
+unique: 724, opcode: LOOKUP (1), nodeid: 1, insize: 52, pid: 8014
+LOOKUP /renamed.txt
+getattr /renamed.txt
+   unique: 724, error: -2 (No such file or directory), outsize: 16
+unique: 726, opcode: OPENDIR (27), nodeid: 1, insize: 48, pid: 8014
+   unique: 726, success, outsize: 32
+unique: 728, opcode: READDIR (28), nodeid: 1, insize: 80, pid: 8014
+readdir[0] from 0
+   unique: 728, success, outsize: 112
+unique: 730, opcode: READDIR (28), nodeid: 1, insize: 80, pid: 8014
+   unique: 730, success, outsize: 16
+unique: 732, opcode: RELEASEDIR (29), nodeid: 1, insize: 64, pid: 0
+   unique: 732, success, outsize: 16
